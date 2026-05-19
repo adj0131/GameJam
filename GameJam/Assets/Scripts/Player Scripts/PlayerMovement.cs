@@ -3,11 +3,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
-
 {
     [SerializeField] float normalSpeed = 5f;
     [SerializeField] float jumpStrength = 3f;
-    [SerializeField] Transform firePoint;
+    public Transform firePoint; // you might have to re-assign this in the inspector, sorry about that
+
+    public Vector3 playerPos;
 
     bool isRunning = false;
     bool isRolling = false;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Run();
+        playerPos = transform.position;
     }
     void OnMove(InputValue value)
     {
