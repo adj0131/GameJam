@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float normalSpeed = 5f;
     [SerializeField] float jumpStrength = 3f;
+    [SerializeField] Transform firePoint;
 
     bool isRunning = false;
     bool isRolling = false;
@@ -49,5 +50,18 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
         isRunning = Mathf.Abs(myRigidBody.linearVelocityX) > Mathf.Epsilon;
+        // Flip player sprite based on movement direction
+        if (moveInput.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            firePoint.rotation = Quaternion.Euler(0, 0, 0);
+        }
+// Face left
+        else if (moveInput.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            firePoint.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
     }
 }
