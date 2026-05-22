@@ -114,6 +114,5 @@ public class PlayerMovement : MonoBehaviour
     void GroundCheck()
     {
         isTouchingGround = myBoxCollider.IsTouchingLayers(groundLayer);
-        print(isTouchingGround);
     }
 }
