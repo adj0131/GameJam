@@ -10,6 +10,7 @@ public class FireTankEnemy : MonoBehaviour
     public float attackCooldown = 2f;
 
     [Header("Shooting")]
+    public float sync = 0.1f; // Time after animation starts to fire first bullet
     public GameObject bulletPrefab;
     public Transform firePoint1;
     public Transform firePoint2;
@@ -17,8 +18,8 @@ public class FireTankEnemy : MonoBehaviour
     public float timeBetweenBullets = 0.15f;
 
     [Header("Death")]
-    public GameObject deathEffectPrefab;    // drag your death animation prefab here
-    public float deathDelay = 1f;           // how long before destroying after death anim
+    public GameObject deathEffectPrefab;
+    public float deathDelay = 1f;
 
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
@@ -38,7 +39,6 @@ public class FireTankEnemy : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        Debug.Log("Player found: " + (player != null)); // temp: confirm player is found
     }
 
     private void Update()
@@ -48,13 +48,21 @@ public class FireTankEnemy : MonoBehaviour
         attackTimer += Time.deltaTime;
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        spriteRenderer.flipX = player.position.x < transform.position.x;
+        // Flip sprite to face the player
+        if (player.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-7f, 7f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(7f, 7f, 1f);
+        }
 
         if (distanceToPlayer <= attackRange)
         {
             myAnimator.SetBool("isRunning", false);
 
-            if (attackTimer >= attackCooldown && !isAttacking)
+            if (!isAttacking && attackTimer >= attackCooldown)
             {
                 attackTimer = 0f;
                 StartCoroutine(ShootBurst());
@@ -74,13 +82,14 @@ public class FireTankEnemy : MonoBehaviour
         }
     }
 
-    IEnumerator ShootBurst()
+    private IEnumerator ShootBurst()
     {
         isAttacking = true;
         myAnimator.SetBool("isRunning", false);
         myAnimator.SetTrigger("Shoot");
 
-        yield return new WaitForSeconds(0.2f);
+        // Brief delay so the shoot animation has started before bullets fire
+        yield return new WaitForSeconds(sync);
 
         FireBullet(firePoint1);
         yield return new WaitForSeconds(timeBetweenBullets);
@@ -89,64 +98,68 @@ public class FireTankEnemy : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenBullets);
 
         FireBullet(firePoint3);
-        yield return new WaitForSeconds(timeBetweenBullets);
 
-        yield return new WaitUntil(() =>
-            !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("FireTank_Shoot") ||
-            myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f
-        );
+        // Fixed cooldown wait instead of relying on animation state name
+        yield return new WaitForSeconds(attackCooldown * 0.5f);
 
         isAttacking = false;
     }
 
-    void FireBullet(Transform firePoint)
+    private void FireBullet(Transform firePoint)
     {
-        if (bulletPrefab == null || firePoint == null) return;
+        if (bulletPrefab == null || firePoint == null || player == null) return;
 
+        // Direction from this specific barrel toward the player
         Vector2 direction = (player.position - firePoint.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
-        bullet.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        // Spawn bullet at the barrel, no rotation needed — Init() handles direction
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+        // Sort above other sprites
+        SpriteRenderer sr = bullet.GetComponent<SpriteRenderer>();
+        if (sr != null) sr.sortingOrder = 10;
+
+        // Pass direction to bullet so it travels correctly regardless of sprite orientation
+        FireTankBullet bulletScript = bullet.GetComponent<FireTankBullet>();
+        if (bulletScript != null)
+        {
+            bulletScript.Init(direction);
+        }
     }
 
     public void TakeDamage(int damage)
     {
         if (isDead) return;
         health -= damage;
-        Debug.Log("FireTank health: " + health); // temp: confirm damage is registering
+        GetComponent<HitFlash>()?.Flash();
         if (health <= 0) Die();
     }
 
-    void Die()
+    private void Die()
     {
         if (isDead) return;
         isDead = true;
         isAttacking = false;
 
-        // stop all movement and shooting
         StopAllCoroutines();
 
-        // disable collider so no more bullets hit it
         if (boxCollider != null)
             boxCollider.enabled = false;
 
-        // spawn death effect on top of firetank
         if (deathEffectPrefab != null)
         {
             GameObject effect = Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
-            effect.GetComponent<SpriteRenderer>().sortingOrder = 15; // render above everything
+            SpriteRenderer sr = effect.GetComponent<SpriteRenderer>();
+            if (sr != null) sr.sortingOrder = 15;
         }
 
-        // play death animation then destroy
         StartCoroutine(DestroyAfterDelay());
     }
 
-    IEnumerator DestroyAfterDelay()
+    private IEnumerator DestroyAfterDelay()
     {
-        // wait for death animation length instead of checking state name
+        myAnimator.SetTrigger("Death");
         yield return new WaitForSeconds(deathDelay);
-
         Destroy(gameObject);
     }
 }
