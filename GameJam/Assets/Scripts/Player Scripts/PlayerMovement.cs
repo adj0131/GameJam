@@ -5,8 +5,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float normalSpeed = 5f;
-    [SerializeField] float jumpStrength = 3f;
-    [SerializeField] float jumpDelay = 0.15f; // number of seconds you have to wait before trying to jump again
+    [SerializeField] float jumpStrength = 12f;
+    [SerializeField] float doubleJumpStrength = 10f;    // slightly weaker than first jump
+    [SerializeField] float jumpDelay = 0.15f;
+    [SerializeField] float gravityScale = 4f;
     public Transform firePoint;
 
     public GameObject bulletPrefab;
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     bool isTouchingGround = false;
     bool isShooting = false;
     bool isJumping = false;
+    bool canDoubleJump = false;                         // added
     public bool isKnockedBack = false;
     int groundLayer;
     Rigidbody2D myRigidBody;
@@ -25,65 +28,78 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     float runSpeed;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBoxCollider = GetComponent<BoxCollider2D>();
         runSpeed = normalSpeed;
-        groundLayer = LayerMask.GetMask("Ground");
+        groundLayer = LayerMask.GetMask("Ground","Obstacles");
+        myRigidBody.gravityScale = gravityScale;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!isKnockedBack) Run(); // skip movement while knocked back
+        if (!isKnockedBack) Run();
         GroundCheck();
         UpdateAnimation();
         playerPos = transform.position;
     }
+
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
     }
+
     void OnJump(InputValue value)
     {
-        if (!isTouchingGround || isJumping)
-        { return; }
-        StartCoroutine(Jump());
+        if (isKnockedBack) return;
+
+        if (isTouchingGround && !isJumping)
+        {
+            // normal first jump
+            StartCoroutine(Jump());
+        }
+        else if (!isTouchingGround && canDoubleJump)
+        {
+            // double jump in the air
+            StartCoroutine(DoubleJump());
+        }
     }
+
     void OnShield(InputValue value)
     {
         // put stuff in later
     }
+
     void OnAttack(InputValue value)
     {
-        if (isShooting || isJumping)
-        { return;}
+        if (isShooting || isJumping) { return; }
         StartCoroutine(Shoot());
     }
+
     void Run()
     {
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
         isRunning = Mathf.Abs(myRigidBody.linearVelocityX) > Mathf.Epsilon;
-        // Flip player sprite based on movement direction
+
         if (moveInput.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
             firePoint.rotation = Quaternion.Euler(0, 0, 0);
         }
-// Face left
         else if (moveInput.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
             firePoint.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
+
     void UpdateAnimation()
     {
-        myAnimator.SetBool("isRunning", isRunning); 
+        myAnimator.SetBool("isRunning", isRunning);
     }
+
     IEnumerator Shoot()
     {
         myAnimator.SetTrigger("Shooting");
@@ -92,28 +108,49 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitUntil(() =>
         {
             AnimatorStateInfo state = myAnimator.GetCurrentAnimatorStateInfo(0);
-            return state.normalizedTime >= 3f / 8f && state.IsName("Player_Shoot"); // allows you to move forward once you're on the shooting frame where a bullet actually appears
+            return state.normalizedTime >= 3f / 8f && state.IsName("Player_Shoot");
         });
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<SpriteRenderer>().sortingOrder = 10;
 
         yield return new WaitUntil(() =>
         {
-            return !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot"); // ends once a different animation is playing
+            return !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Shoot");
         });
 
         isShooting = false;
     }
+
     IEnumerator Jump()
     {
         isJumping = true;
+        canDoubleJump = true;                           // enable double jump after first jump
         myRigidBody.linearVelocityY = jumpStrength;
         myAnimator.SetTrigger("Jumping");
 
         yield return new WaitForSeconds(jumpDelay);
         isJumping = false;
     }
+
+    IEnumerator DoubleJump()
+    {
+        canDoubleJump = false;                          // use it up — no triple jump
+        myRigidBody.linearVelocityY = doubleJumpStrength;
+        myAnimator.SetTrigger("Jumping");               // reuses same animation
+
+        yield return new WaitForSeconds(jumpDelay);
+    }
+
     void GroundCheck()
     {
+        bool wasInAir = !isTouchingGround;
         isTouchingGround = myBoxCollider.IsTouchingLayers(groundLayer);
+
+        // reset double jump when landing
+        if (isTouchingGround && wasInAir)
+        {
+            canDoubleJump = false;
+        }
     }
 }
