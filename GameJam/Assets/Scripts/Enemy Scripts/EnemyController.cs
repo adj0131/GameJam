@@ -1,8 +1,6 @@
-using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.Rendering;
 
 public class EnemyController : MonoBehaviour
 {
@@ -20,8 +18,8 @@ public class EnemyController : MonoBehaviour
     public float distanceToPlayer = Mathf.Infinity;
     public Vector3 nearestEnemy;
     public Enemy closestEnemy = null;
-    
-    private List<(Enemy enemy, float x, float y)> enemies = new List<(Enemy, float, float)>();
+
+    private List<Enemy> enemies = new List<Enemy>();
     private int numEnemies;
 
     void Start()
@@ -34,13 +32,20 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        foreach (var e in enemies)
+        // Remove any destroyed enemies before iterating
+        enemies.RemoveAll(e => e == null);
+
+        // Reset each frame so the closest is recalculated fresh
+        distanceToPlayer = Mathf.Infinity;
+        closestEnemy = null;
+
+        foreach (Enemy enemy in enemies)
         {
-            float distance = Vector3.Distance(playerScript.playerPos, e.enemy.transform.position);
+            float distance = Vector3.Distance(playerScript.playerPos, enemy.transform.position);
             if (distance < distanceToPlayer)
             {
                 distanceToPlayer = distance;
-                closestEnemy = e.enemy;
+                closestEnemy = enemy;
             }
         }
 
@@ -48,17 +53,22 @@ public class EnemyController : MonoBehaviour
         {
             nearestEnemy = closestEnemy.transform.position;
         }
+
         numEnemies = enemies.Count;
     }
 
     public void SpawnEnemies(int waveNumber, int enemyNumber)
     {
+        // Randomise spawn position each wave
+        x = Random.Range(-5f, 5f);
+        y = Random.Range(-5f, 5f);
+
         for (int i = 0; i < waveNumber + 1; i++)
         {
             for (int j = 0; j < enemyNumber + 1; j++)
             {
                 Enemy enemy = Instantiate(enemyPrefab, new Vector3(x, y, 0), Quaternion.identity);
-                enemies.Add((enemy, x, y));
+                enemies.Add(enemy);
             }
         }
     }
