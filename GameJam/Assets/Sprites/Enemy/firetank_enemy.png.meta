@@ -132,7 +132,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -173,12 +173,12 @@ TextureImporter:
       name: firetank_enemy_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 255
-        width: 50
-        height: 72
+        x: 16
+        y: 256
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: firetank_enemy_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 255
-        width: 50
-        height: 72
+        x: 96
+        y: 256
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: firetank_enemy_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 255
-        width: 50
-        height: 72
+        x: 176
+        y: 256
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: firetank_enemy_3
       rect:
         serializedVersion: 2
-        x: 255
-        y: 255
-        width: 50
-        height: 72
+        x: 256
+        y: 256
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,12 +261,12 @@ TextureImporter:
       name: firetank_enemy_4
       rect:
         serializedVersion: 2
-        x: 15
-        y: 171
-        width: 50
-        height: 72
+        x: 16
+        y: 172
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -283,12 +283,12 @@ TextureImporter:
       name: firetank_enemy_5
       rect:
         serializedVersion: 2
-        x: 95
-        y: 171
-        width: 50
-        height: 72
+        x: 96
+        y: 172
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -305,12 +305,12 @@ TextureImporter:
       name: firetank_enemy_6
       rect:
         serializedVersion: 2
-        x: 175
-        y: 171
-        width: 50
-        height: 72
+        x: 176
+        y: 172
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -327,12 +327,12 @@ TextureImporter:
       name: firetank_enemy_7
       rect:
         serializedVersion: 2
-        x: 255
-        y: 171
-        width: 50
-        height: 72
+        x: 256
+        y: 172
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -349,12 +349,12 @@ TextureImporter:
       name: firetank_enemy_8
       rect:
         serializedVersion: 2
-        x: 15
-        y: 87
-        width: 50
-        height: 72
+        x: 16
+        y: 88
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -371,12 +371,12 @@ TextureImporter:
       name: firetank_enemy_9
       rect:
         serializedVersion: 2
-        x: 95
-        y: 87
-        width: 50
-        height: 72
+        x: 81
+        y: 88
+        width: 63
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -393,12 +393,12 @@ TextureImporter:
       name: firetank_enemy_10
       rect:
         serializedVersion: 2
-        x: 175
-        y: 87
-        width: 50
-        height: 72
+        x: 176
+        y: 88
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -415,12 +415,12 @@ TextureImporter:
       name: firetank_enemy_11
       rect:
         serializedVersion: 2
-        x: 255
-        y: 87
-        width: 53
-        height: 72
+        x: 241
+        y: 88
+        width: 66
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -437,12 +437,12 @@ TextureImporter:
       name: firetank_enemy_12
       rect:
         serializedVersion: 2
-        x: 15
-        y: 3
-        width: 54
-        height: 72
+        x: 16
+        y: 4
+        width: 52
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -459,12 +459,12 @@ TextureImporter:
       name: firetank_enemy_13
       rect:
         serializedVersion: 2
-        x: 95
-        y: 3
-        width: 58
-        height: 72
+        x: 81
+        y: 4
+        width: 71
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -481,12 +481,12 @@ TextureImporter:
       name: firetank_enemy_14
       rect:
         serializedVersion: 2
-        x: 175
-        y: 3
-        width: 50
-        height: 72
+        x: 168
+        y: 4
+        width: 67
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -500,111 +500,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: firetank_enemy_15
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 49
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e3bd1f3e54637070800000000000000
-      internalID: 8102930510518268905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firetank_enemy_16
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 46
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 750d831fe307fec00800000000000000
-      internalID: 932087063526297687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: firetank_enemy_17
       rect:
         serializedVersion: 2
-        x: 255
-        y: 3
-        width: 50
-        height: 72
+        x: 256
+        y: 4
+        width: 48
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48defd4abafbbc1e0800000000000000
+      spriteID: 50dfe057747b845139251a3e03048d59
       internalID: -2176435250977051260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firetank_enemy_18
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 33
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b79731fc32de2710800000000000000
-      internalID: 1670503670987855798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firetank_enemy_19
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 36
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66c7fe4d6fa573ed0800000000000000
-      internalID: -2434377057389544346
       vertices: []
       indices: 
       edges: []
@@ -613,7 +525,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9e37da9d5af6d4a74bf2a74499ca814c
     internalID: 0
     vertices: []
     indices: 
@@ -621,7 +533,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       firetank_enemy_0: -7688350173504677964
       firetank_enemy_1: 5124528935202238627
@@ -630,7 +546,7 @@ TextureImporter:
       firetank_enemy_12: -8101090011765362112
       firetank_enemy_13: -506069662803259977
       firetank_enemy_14: -1411459075652528115
-      firetank_enemy_15: 8102930510518268905
+      firetank_enemy_15: -2176435250977051260
       firetank_enemy_16: 932087063526297687
       firetank_enemy_17: -2176435250977051260
       firetank_enemy_18: 1670503670987855798
