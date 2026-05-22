@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 6a8a7189a9f7765468198b7cf08517f3
+guid: ee445bdccd38b654cb2eb6b1383eb93b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8108577013137336075
-    second: junkman_idle_loop_0
+      213: 9089837192730027013
+    second: junkman_block_0
   - first:
-      213: -3359082922822816898
-    second: junkman_idle_loop_1
+      213: -288015536723740178
+    second: junkman_block_1
   - first:
-      213: 6954551126425531972
-    second: junkman_idle_loop_2
+      213: -6616967747359778050
+    second: junkman_block_2
   - first:
-      213: -8290148562573426794
-    second: junkman_idle_loop_3
+      213: -112383342957864468
+    second: junkman_block_3
   - first:
-      213: 6592499406429445445
-    second: junkman_idle_loop_4
+      213: 8648863086668772437
+    second: junkman_block_4
   - first:
-      213: 8111854761524852462
-    second: junkman_idle_loop_5
+      213: 7776728531518837144
+    second: junkman_block_5
   - first:
-      213: -4075208638246510982
-    second: junkman_idle_loop_6
+      213: -7246267647305556122
+    second: junkman_block_6
   - first:
-      213: -4468622331045085658
-    second: junkman_idle_loop_7
+      213: -277261877568831163
+    second: junkman_block_7
   - first:
-      213: 7183706060783117552
-    second: junkman_idle_loop_8
+      213: 4487068040850841206
+    second: junkman_block_8
   - first:
-      213: 3626375662545283956
-    second: junkman_idle_loop_9
+      213: 9204074589442170826
+    second: junkman_block_9
   - first:
-      213: 4486234235775724763
-    second: junkman_idle_loop_10
+      213: -8451447311106545692
+    second: junkman_block_10
   - first:
-      213: -4037128980485616684
-    second: junkman_idle_loop_11
+      213: -8024131638263068646
+    second: junkman_block_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -133,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: junkman_idle_loop_0
+      name: junkman_block_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f81d0aea2c887f80800000000000000
-      internalID: -8108577013137336075
+      spriteID: 504aeca44c6952e70800000000000000
+      internalID: 9089837192730027013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_1
+      name: junkman_block_1
       rect:
         serializedVersion: 2
         x: 88
@@ -170,14 +170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7ba01ef0e32261d0800000000000000
-      internalID: -3359082922822816898
+      spriteID: ee9b9c33563c00cf0800000000000000
+      internalID: -288015536723740178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_2
+      name: junkman_block_2
       rect:
         serializedVersion: 2
         x: 176
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 446f2e61767838060800000000000000
-      internalID: 6954551126425531972
+      spriteID: efa576854eecb24a0800000000000000
+      internalID: -6616967747359778050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_3
+      name: junkman_block_3
       rect:
         serializedVersion: 2
         x: 264
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69f78903ec973fc80800000000000000
-      internalID: -8290148562573426794
+      spriteID: ce9535ce1fbb07ef0800000000000000
+      internalID: -112383342957864468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_4
+      name: junkman_block_4
       rect:
         serializedVersion: 2
         x: 0
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d533618434d7b50800000000000000
-      internalID: 6592499406429445445
+      spriteID: 55471e7572fe60870800000000000000
+      internalID: 8648863086668772437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_5
+      name: junkman_block_5
       rect:
         serializedVersion: 2
         x: 88
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee6ff3a5de8139070800000000000000
-      internalID: 8111854761524852462
+      spriteID: 89153d3856d7ceb60800000000000000
+      internalID: 7776728531518837144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_6
+      name: junkman_block_6
       rect:
         serializedVersion: 2
         x: 176
@@ -280,14 +280,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7e96bbb553f177c0800000000000000
-      internalID: -4075208638246510982
+      spriteID: 66f52f697f5107b90800000000000000
+      internalID: -7246267647305556122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_7
+      name: junkman_block_7
       rect:
         serializedVersion: 2
         x: 264
@@ -302,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62efdaa6aa34cf1c0800000000000000
-      internalID: -4468622331045085658
+      spriteID: 54180c59ac7f62cf0800000000000000
+      internalID: -277261877568831163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_8
+      name: junkman_block_8
       rect:
         serializedVersion: 2
         x: 0
@@ -324,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f46cc3f996a1b360800000000000000
-      internalID: 7183706060783117552
+      spriteID: 67e1ce11c94454e30800000000000000
+      internalID: 4487068040850841206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_9
+      name: junkman_block_9
       rect:
         serializedVersion: 2
         x: 88
@@ -346,14 +346,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47b2224a379735230800000000000000
-      internalID: 3626375662545283956
+      spriteID: acf56e5e2117bbf70800000000000000
+      internalID: 9204074589442170826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_10
+      name: junkman_block_10
       rect:
         serializedVersion: 2
         x: 176
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdcab92b44e424e30800000000000000
-      internalID: 4486234235775724763
+      spriteID: 4e7609fb27d66ba80800000000000000
+      internalID: -8451447311106545692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: junkman_idle_loop_11
+      name: junkman_block_11
       rect:
         serializedVersion: 2
         x: 264
@@ -390,8 +390,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4db48b5f49c39f7c0800000000000000
-      internalID: -4037128980485616684
+      spriteID: a184b56e9ce84a090800000000000000
+      internalID: -8024131638263068646
       vertices: []
       indices: 
       edges: []
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d19ec0fd8bd464d4087d513f0ef58542
+    spriteID: 18eaa4d00c2f15044b08b531057c58ff
     internalID: 0
     vertices: []
     indices: 
@@ -412,18 +412,18 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":88.0,"y":70.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      junkman_idle_loop_0: -8108577013137336075
-      junkman_idle_loop_1: -3359082922822816898
-      junkman_idle_loop_10: 4486234235775724763
-      junkman_idle_loop_11: -4037128980485616684
-      junkman_idle_loop_2: 6954551126425531972
-      junkman_idle_loop_3: -8290148562573426794
-      junkman_idle_loop_4: 6592499406429445445
-      junkman_idle_loop_5: 8111854761524852462
-      junkman_idle_loop_6: -4075208638246510982
-      junkman_idle_loop_7: -4468622331045085658
-      junkman_idle_loop_8: 7183706060783117552
-      junkman_idle_loop_9: 3626375662545283956
+      junkman_block_0: 9089837192730027013
+      junkman_block_1: -288015536723740178
+      junkman_block_10: -8451447311106545692
+      junkman_block_11: -8024131638263068646
+      junkman_block_2: -6616967747359778050
+      junkman_block_3: -112383342957864468
+      junkman_block_4: 8648863086668772437
+      junkman_block_5: 7776728531518837144
+      junkman_block_6: -7246267647305556122
+      junkman_block_7: -277261877568831163
+      junkman_block_8: 4487068040850841206
+      junkman_block_9: 9204074589442170826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

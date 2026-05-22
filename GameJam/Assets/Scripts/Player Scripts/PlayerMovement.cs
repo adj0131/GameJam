@@ -6,9 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float normalSpeed = 5f;
     [SerializeField] float jumpStrength = 12f;
-    [SerializeField] float doubleJumpStrength = 10f;    // slightly weaker than first jump
+ //   [SerializeField] float doubleJumpStrength = 10f;    // slightly weaker than first jump
     [SerializeField] float jumpDelay = 0.15f;
     [SerializeField] float gravityScale = 4f;
+    [SerializeField] float runBufferTime = 0.1f; // grace time to let player change direction before causing you to stop running animation
+    [SerializeField] float parryEndLag = 0.1f; // end time where you're stuck after parrying
+    float runBufferTimer;
     public Transform firePoint;
 
     public GameObject bulletPrefab;
@@ -16,12 +19,13 @@ public class PlayerMovement : MonoBehaviour
     Animator myAnimator;
 
     bool isRunning = false;
-    bool isRolling = false;
+    bool isParrying = false;
     bool isTouchingGround = false;
     bool isShooting = false;
     bool isJumping = false;
-    bool canDoubleJump = false;                         // added
+  //  bool canDoubleJump = false;                         // added
     public bool isKnockedBack = false;
+    bool isInvincible = false;
     int groundLayer;
     Rigidbody2D myRigidBody;
     BoxCollider2D myBoxCollider;
@@ -60,16 +64,16 @@ public class PlayerMovement : MonoBehaviour
             // normal first jump
             StartCoroutine(Jump());
         }
-        else if (!isTouchingGround && canDoubleJump)
-        {
-            // double jump in the air
-            StartCoroutine(DoubleJump());
-        }
+     //   else if (!isTouchingGround && canDoubleJump)
+     //   {
+     //       // double jump in the air
+     //       StartCoroutine(DoubleJump());
+     //   }
     }
 
-    void OnShield(InputValue value)
+    void OnParry(InputValue value)
     {
-        // put stuff in later
+        StartCoroutine(Parry());
     }
 
     void OnAttack(InputValue value)
@@ -80,8 +84,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
+        if(isShooting || isParrying) { return; } // don't bother if you're currently shooting
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
-        isRunning = Mathf.Abs(myRigidBody.linearVelocityX) > Mathf.Epsilon;
+
+        bool hasMovementInput = Mathf.Abs(moveInput.x) > Mathf.Epsilon;
+
+        // checks to see if input has been zero for longer than grace period before officially stopping run
+        if (hasMovementInput)
+        { runBufferTimer = runBufferTime; }
+        else
+        { runBufferTimer -= Time.deltaTime; }
+        isRunning = runBufferTimer > 0f; // Checks to see if you've run out of grace time
 
         if (moveInput.x > 0)
         {
@@ -104,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
     {
         myAnimator.SetTrigger("Shooting");
         isShooting = true;
+        isRunning = false;
+        myRigidBody.linearVelocityX = 0f; // makes you go stationary while shooting
 
         yield return new WaitUntil(() =>
         {
@@ -125,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Jump()
     {
         isJumping = true;
-        canDoubleJump = true;                           // enable double jump after first jump
+     //   canDoubleJump = true;                           // enable double jump after first jump
         myRigidBody.linearVelocityY = jumpStrength;
         myAnimator.SetTrigger("Jumping");
 
@@ -133,24 +148,49 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
     }
 
-    IEnumerator DoubleJump()
+  //  IEnumerator DoubleJump()
+  //  {
+  //      canDoubleJump = false;                          // use it up — no triple jump
+  //      myRigidBody.linearVelocityY = doubleJumpStrength;
+  //      myAnimator.SetTrigger("Jumping");               // reuses same animation
+
+  //      yield return new WaitForSeconds(jumpDelay);
+  //  }
+
+    IEnumerator Parry()
     {
-        canDoubleJump = false;                          // use it up — no triple jump
-        myRigidBody.linearVelocityY = doubleJumpStrength;
-        myAnimator.SetTrigger("Jumping");               // reuses same animation
+        isParrying = true;
+        isRunning = false;
+        myAnimator.SetTrigger("Parrying");
+        myRigidBody.linearVelocityX = 0f;
 
-        yield return new WaitForSeconds(jumpDelay);
+        yield return new WaitUntil(() =>
+        {
+            AnimatorStateInfo state = myAnimator.GetCurrentAnimatorStateInfo(0);
+            return state.normalizedTime >= 6f / 12f && state.IsName("Player_Parry");
+        });
+
+        isInvincible = true;
+
+        yield return new WaitUntil(() =>
+        {
+            return !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Parry");
+        });
+
+        yield return new WaitForSecondsRealtime(parryEndLag); // adds a small delay so you don't immediately go back into running
+
+        isParrying = false;
+        isInvincible = false;
     }
-
     void GroundCheck()
     {
         bool wasInAir = !isTouchingGround;
         isTouchingGround = myBoxCollider.IsTouchingLayers(groundLayer);
 
         // reset double jump when landing
-        if (isTouchingGround && wasInAir)
-        {
-            canDoubleJump = false;
-        }
+//        if (isTouchingGround && wasInAir)
+//        {
+//            canDoubleJump = false;
+//        }
     }
 }
