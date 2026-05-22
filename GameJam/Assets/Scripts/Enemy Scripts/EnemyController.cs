@@ -10,11 +10,11 @@ public class EnemyController : MonoBehaviour
     public PlayerMovement playerScript;
     public LayerMask enemyMask;
 
-    public float x = Random.Range(-5f, 5f);
-    public float y = Random.Range(-5f, 5f);
+    public float x;
+    public float y;
 
     public int waveNum;
-    public int enemyNum = Random.Range(3, 6);
+    public int enemyNum;
 
     public float movespeed;
     public float distanceToPlayer = Mathf.Infinity;
@@ -26,6 +26,9 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        x = Random.Range(-5f, 5f);
+        y = Random.Range(-5f, 5f);
+        enemyNum = Random.Range(3, 6);
         StartCoroutine(SpawnCount());
     }
 
@@ -41,7 +44,10 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        nearestEnemy = closestEnemy.transform.position;
+        if (closestEnemy != null)
+        {
+            nearestEnemy = closestEnemy.transform.position;
+        }
         numEnemies = enemies.Count;
     }
 
