@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/Player Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerHealth.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/HealthBar.cs" />
+    <Compile Include="Assets/Scripts/HitFlash.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
