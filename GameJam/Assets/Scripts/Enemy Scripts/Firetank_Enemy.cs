@@ -38,7 +38,7 @@ public class FireTankEnemy : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        player = GameObject.FindGameObjectWithTag("Target")?.transform;
     }
 
     private void Update()
