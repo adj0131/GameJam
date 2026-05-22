@@ -12,15 +12,33 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
-{
-    if (hitInfo == null) return;
-
-    FireTankEnemy fireTank = hitInfo.GetComponent<FireTankEnemy>();
-    if (fireTank != null && fireTank.gameObject != null)
     {
-        fireTank.TakeDamage(damage);
-        Destroy(gameObject);
-        return;
+        if (hitInfo == null) return;
+
+        FireTankEnemy fireTank = hitInfo.GetComponent<FireTankEnemy>();
+        if (fireTank != null)
+        {
+            fireTank.TakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
+
+        FridgeEnemy fridge = hitInfo.GetComponent<FridgeEnemy>();
+        if (fridge != null)
+        {
+            fridge.TakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
     }
-}
+    void OnEnable()
+    {
+        Invoke(nameof(DestroySelf), 5f);
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+    
 }

@@ -51,12 +51,15 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Enemy Scripts/EnemyController.cs" />
     <Compile Include="Assets/Animations/DeathEffect/DeathEffect.cs" />
+    <Compile Include="Assets/Scripts/Enemy Scripts/Firetank/Firetank_Enemy.cs" />
     <Compile Include="Assets/Scripts/Object Scripts/Weapons.cs" />
-    <Compile Include="Assets/Scripts/Enemy Scripts/FiretankBullet.cs" />
+    <Compile Include="Assets/Scripts/Enemy Scripts/fridge enemy/IcedEffects.cs" />
+    <Compile Include="Assets/Scripts/Enemy Scripts/fridge enemy/FridgeEnemy.cs" />
     <Compile Include="Assets/Scripts/Object Scripts/Barrier.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/Bullet.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/Enemy.cs" />
-    <Compile Include="Assets/Scripts/Enemy Scripts/Firetank_Enemy.cs" />
+    <Compile Include="Assets/Scripts/Enemy Scripts/Firetank/FiretankBullet.cs" />
+    <Compile Include="Assets/Scripts/Enemy Scripts/fridge enemy/IceProjectile.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerHealth.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/HealthBar.cs" />

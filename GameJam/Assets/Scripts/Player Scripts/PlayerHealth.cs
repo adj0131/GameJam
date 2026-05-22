@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+    healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -29,7 +29,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        GetComponent<HitFlash>()?.Flash();
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }

@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     float runSpeed;
 
+
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -192,5 +193,28 @@ public class PlayerMovement : MonoBehaviour
 //        {
 //            canDoubleJump = false;
 //        }
+    }
+
+    public void ApplySlow(float slowAmount, float duration)
+    {
+        StopCoroutine("SlowCoroutine");
+        StartCoroutine(SlowCoroutine(slowAmount, duration));
+    }
+
+    private IEnumerator SlowCoroutine(float slowAmount, float duration)
+    {
+        float originalSpeed = runSpeed;
+        float originalJump = jumpStrength;
+        float originalAnimSpeed = myAnimator.speed;
+
+        runSpeed *= slowAmount;
+        jumpStrength *= slowAmount;
+        myAnimator.speed *= slowAmount;
+
+        yield return new WaitForSeconds(duration);
+
+        runSpeed = originalSpeed;
+        jumpStrength = originalJump;
+        myAnimator.speed = originalAnimSpeed;
     }
 }
