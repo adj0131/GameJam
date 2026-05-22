@@ -9,6 +9,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        if (healthBar == null)
+        {
+            healthBar = GetComponentInChildren<HealthBar>();
+        }
+
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }

@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 4203e3e80267842ac9bb932f76864a35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2179340586027573525
+    second: fridge_enemy_0
+  - first:
+      213: 1631284870129837040
+    second: fridge_enemy_1
+  - first:
+      213: -6911682925907102885
+    second: fridge_enemy_2
+  - first:
+      213: -4384312599975571316
+    second: fridge_enemy_3
+  - first:
+      213: -4098464611413283413
+    second: fridge_enemy_4
+  - first:
+      213: 2766949600837853741
+    second: fridge_enemy_5
+  - first:
+      213: -40736260325152723
+    second: fridge_enemy_6
+  - first:
+      213: -715103875569215191
+    second: fridge_enemy_7
+  - first:
+      213: 5716097143737539725
+    second: fridge_enemy_8
+  - first:
+      213: -1376802550321629070
+    second: fridge_enemy_9
+  - first:
+      213: 2733601689101448145
+    second: fridge_enemy_10
+  - first:
+      213: 5581784967457240449
+    second: fridge_enemy_11
+  - first:
+      213: -2280810134277831594
+    second: fridge_enemy_12
+  - first:
+      213: -4467158783590993653
+    second: fridge_enemy_13
+  - first:
+      213: -7617359240311489546
+    second: fridge_enemy_14
+  - first:
+      213: -1531393242800238049
+    second: fridge_enemy_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fridge_enemy_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 303
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511e3c267b29e3e10800000000000000
+      internalID: 2179340586027573525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 305
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3ee8b42fc73a610800000000000000
+      internalID: 1631284870129837040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_2
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 303
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53bc21aff4c410a0800000000000000
+      internalID: -6911682925907102885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 305
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80df2e5beac723c0800000000000000
+      internalID: -4384312599975571316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 204
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bada33886245f17c0800000000000000
+      internalID: -4098464611413283413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_5
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 206
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d226955800e266620800000000000000
+      internalID: 2766949600837853741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 204
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2867d946964f6ff0800000000000000
+      internalID: -40736260325152723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 206
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 929113f50d07316f0800000000000000
+      internalID: -715103875569215191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 105
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cd91a2118a35f40800000000000000
+      internalID: 5716097143737539725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 107
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2783a36006d94ece0800000000000000
+      internalID: -1376802550321629070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_10
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 105
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3bc44c044bfe520800000000000000
+      internalID: 2733601689101448145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_11
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 107
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18577e5badb767d40800000000000000
+      internalID: 5581784967457240449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6544242644fe850e0800000000000000
+      internalID: -2280810134277831594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_13
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 8
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01facc11c67102c0800000000000000
+      internalID: -4467158783590993653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_14
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 6
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbb1b22124b94690800000000000000
+      internalID: -7617359240311489546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fridge_enemy_15
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 8
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12557795f56fbae0800000000000000
+      internalID: -1531393242800238049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fridge_enemy_0: 2179340586027573525
+      fridge_enemy_1: 1631284870129837040
+      fridge_enemy_10: 2733601689101448145
+      fridge_enemy_11: 5581784967457240449
+      fridge_enemy_12: -2280810134277831594
+      fridge_enemy_13: -4467158783590993653
+      fridge_enemy_14: -7617359240311489546
+      fridge_enemy_15: -1531393242800238049
+      fridge_enemy_2: -6911682925907102885
+      fridge_enemy_3: -4384312599975571316
+      fridge_enemy_4: -4098464611413283413
+      fridge_enemy_5: 2766949600837853741
+      fridge_enemy_6: -40736260325152723
+      fridge_enemy_7: -715103875569215191
+      fridge_enemy_8: 5716097143737539725
+      fridge_enemy_9: -1376802550321629070
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

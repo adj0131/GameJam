@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool isTouchingGround = false;
     bool isShooting = false;
     bool isJumping = false;
+    public bool isKnockedBack = false;
     int groundLayer;
     Rigidbody2D myRigidBody;
     BoxCollider2D myBoxCollider;
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Run();
+        if (!isKnockedBack) Run(); // skip movement while knocked back
         GroundCheck();
         UpdateAnimation();
         playerPos = transform.position;

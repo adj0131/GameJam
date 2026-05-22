@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: b4be176d17c684837b7235dcb7df5d3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7688350173504677964
+    second: firetank_enemy_0
+  - first:
+      213: 5124528935202238627
+    second: firetank_enemy_1
+  - first:
+      213: -8083572408254011367
+    second: firetank_enemy_2
+  - first:
+      213: 336226116261809127
+    second: firetank_enemy_3
+  - first:
+      213: -691094841139945878
+    second: firetank_enemy_4
+  - first:
+      213: 450127642573787830
+    second: firetank_enemy_5
+  - first:
+      213: 8991470300920714727
+    second: firetank_enemy_6
+  - first:
+      213: -8294825842693378936
+    second: firetank_enemy_7
+  - first:
+      213: -5813977705096963528
+    second: firetank_enemy_8
+  - first:
+      213: 8631589848335435888
+    second: firetank_enemy_9
+  - first:
+      213: -9046232888817505001
+    second: firetank_enemy_10
+  - first:
+      213: -8056456701615442335
+    second: firetank_enemy_11
+  - first:
+      213: -8101090011765362112
+    second: firetank_enemy_12
+  - first:
+      213: -506069662803259977
+    second: firetank_enemy_13
+  - first:
+      213: -1411459075652528115
+    second: firetank_enemy_14
+  - first:
+      213: 8102930510518268905
+    second: firetank_enemy_15
+  - first:
+      213: 932087063526297687
+    second: firetank_enemy_16
+  - first:
+      213: -2176435250977051260
+    second: firetank_enemy_17
+  - first:
+      213: 1670503670987855798
+    second: firetank_enemy_18
+  - first:
+      213: -2434377057389544346
+    second: firetank_enemy_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: firetank_enemy_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 255
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b7d077704e7d4590800000000000000
+      internalID: -7688350173504677964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 255
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0b0f76aebfd1740800000000000000
+      internalID: 5124528935202238627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 255
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918eed929b161df80800000000000000
+      internalID: -8083572408254011367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb8eff0fd38aa400800000000000000
+      internalID: 336226116261809127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 171
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e9fbf47ecb866f0800000000000000
+      internalID: -691094841139945878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 171
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2d13fb4bc2f3600800000000000000
+      internalID: 450127642573787830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 171
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e59ade899e18cc70800000000000000
+      internalID: 8991470300920714727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_7
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 171
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ce78c08dbd2ec80800000000000000
+      internalID: -8294825842693378936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 87
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a97abb41a905fa0800000000000000
+      internalID: -5813977705096963528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 87
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078c6e42c3199c770800000000000000
+      internalID: 8631589848335435888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_10
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 87
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71da39add13557280800000000000000
+      internalID: -9046232888817505001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_11
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 87
+        width: 53
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16675e79057b13090800000000000000
+      internalID: -8056456701615442335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 54
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042b2434e85239f80800000000000000
+      internalID: -8101090011765362112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_13
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 3
+        width: 58
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd820da2541af8f0800000000000000
+      internalID: -506069662803259977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_14
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 3
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08dabce27d796ce0800000000000000
+      internalID: -1411459075652528115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_15
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 49
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3bd1f3e54637070800000000000000
+      internalID: 8102930510518268905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_16
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 46
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750d831fe307fec00800000000000000
+      internalID: 932087063526297687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 3
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48defd4abafbbc1e0800000000000000
+      internalID: -2176435250977051260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_18
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 33
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b79731fc32de2710800000000000000
+      internalID: 1670503670987855798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firetank_enemy_19
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 36
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c7fe4d6fa573ed0800000000000000
+      internalID: -2434377057389544346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      firetank_enemy_0: -7688350173504677964
+      firetank_enemy_1: 5124528935202238627
+      firetank_enemy_10: -9046232888817505001
+      firetank_enemy_11: -8056456701615442335
+      firetank_enemy_12: -8101090011765362112
+      firetank_enemy_13: -506069662803259977
+      firetank_enemy_14: -1411459075652528115
+      firetank_enemy_15: 8102930510518268905
+      firetank_enemy_16: 932087063526297687
+      firetank_enemy_17: -2176435250977051260
+      firetank_enemy_18: 1670503670987855798
+      firetank_enemy_19: -2434377057389544346
+      firetank_enemy_2: -8083572408254011367
+      firetank_enemy_3: 336226116261809127
+      firetank_enemy_4: -691094841139945878
+      firetank_enemy_5: 450127642573787830
+      firetank_enemy_6: 8991470300920714727
+      firetank_enemy_7: -8294825842693378936
+      firetank_enemy_8: -5813977705096963528
+      firetank_enemy_9: 8631589848335435888
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

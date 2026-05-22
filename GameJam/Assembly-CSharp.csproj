@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Enemy Scripts/EnemyController.cs" />
     <Compile Include="Assets/Scripts/Object Scripts/Weapons.cs" />
+    <Compile Include="Assets/Scripts/Object Scripts/Barrier.cs" />
     <Compile Include="Assets/Scripts/Object Scripts/Bullet.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/Enemy.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerMovement.cs" />
