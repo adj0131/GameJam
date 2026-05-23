@@ -59,6 +59,7 @@
     <Compile Include="Assets/Scripts/Object Scripts/Barrier.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/Bullet.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/Enemy.cs" />
+    <Compile Include="Assets/Scripts/Player Scripts/SoundManager.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/Firetank/FiretankBullet.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/fridge enemy/IceProjectile.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerMovement.cs" />
