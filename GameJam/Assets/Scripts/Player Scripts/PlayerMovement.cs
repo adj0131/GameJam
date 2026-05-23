@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float gravityScale = 4f;
     [SerializeField] float runBufferTime = 0.1f; // grace time to let player change direction before causing you to stop running animation
     [SerializeField] float parryEndLag = 0.1f; // end time where you're stuck after parrying
-    float runBufferTimer;
+    float runBufferTimer = 0f;
     public Transform firePoint;
 
     public GameObject bulletPrefab;
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
-       // playerSoundManager.ManageWalkAudio();
+        playerSoundManager.ManageWalkAudio();
         if(isShooting || isParrying) { return; } // don't bother if you're currently shooting
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
 

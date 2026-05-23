@@ -665,7 +665,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sourceLoop: {fileID: 726747101}
   sourceSFX: {fileID: 726747100}
-  walkClip: {fileID: 8300000, guid: 8c896d46ba70f54489d8c1c91f4f9cfa, type: 3}
+  walkClip: {fileID: 8300000, guid: 9723db3a14f0d7e48bae8e48035f6486, type: 3}
   jumpClip: {fileID: 8300000, guid: 2a186e8cf6f19ef4cad3d3ced3375650, type: 3}
   shootClip: {fileID: 8300000, guid: efc16f1d9db2a82469a0dcb851d55180, type: 3}
 --- !u!1 &750166476
