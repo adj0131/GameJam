@@ -17,8 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public Vector3 playerPos;
     Animator myAnimator;
+    SoundManager playerSoundManager;
 
-    bool isRunning = false;
+    public bool isRunning = false;
     bool isParrying = false;
     bool isTouchingGround = false;
     bool isShooting = false;
@@ -41,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         runSpeed = normalSpeed;
         groundLayer = LayerMask.GetMask("Ground","Obstacles");
         myRigidBody.gravityScale = gravityScale;
+        playerSoundManager = GetComponent<SoundManager>();
     }
 
     void Update()
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
+       // playerSoundManager.ManageWalkAudio();
         if(isShooting || isParrying) { return; } // don't bother if you're currently shooting
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
 
@@ -116,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        playerSoundManager.playShootAudio();
         myAnimator.SetTrigger("Shooting");
         isShooting = true;
         isRunning = false;
@@ -140,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Jump()
     {
+        playerSoundManager.playJumpAudio();
         isJumping = true;
      //   canDoubleJump = true;                           // enable double jump after first jump
         myRigidBody.linearVelocityY = jumpStrength;
