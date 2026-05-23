@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
     {
         sourceLoop.clip = walkClip;
 
-        if (playerMovement.isRunning)
+        if (playerMovement.isRunning && playerMovement.isTouchingGround)
         {
             if(!sourceLoop.isPlaying)
             {
@@ -34,7 +34,6 @@ public class SoundManager : MonoBehaviour
                 sourceLoop.Stop();
             }
         }
-        sourceLoop.Play();
     }
     public void playJumpAudio()
     {

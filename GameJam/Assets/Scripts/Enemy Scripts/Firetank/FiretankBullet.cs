@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FireTankBullet : MonoBehaviour
 {
+
     public float speed = 10f;
     public int damage = 10;
 
