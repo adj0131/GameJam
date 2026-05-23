@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6566225327008798809}
   - component: {fileID: 174356304339371644}
   - component: {fileID: 3990326217242254933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firetank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
   moveSpeed: 2
   attackRange: 10
   attackCooldown: 5
-  sync: 0.1
+  sync: 1
   bulletPrefab: {fileID: 6265511015466234662, guid: b95470f3c6a0649e99fe6794c177c654, type: 3}
   firePoint1: {fileID: 7810720833227548321}
   firePoint2: {fileID: 2928544347556514371}
@@ -233,7 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120815759516111842}
   - component: {fileID: 1839700836403720883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firepoint-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.187, y: 0.054, z: 0}
-  m_LocalScale: {x: 0.03671886, y: 0.04770072, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4057047128958884248}
@@ -302,7 +302,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.49056602, g: 0.19206122, b: 0.19206122, a: 1}
@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2928544347556514371}
   - component: {fileID: 4210261751713945901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firepoint-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.14, y: 0.054, z: 0}
-  m_LocalScale: {x: 0.03671886, y: 0.04770072, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4057047128958884248}
@@ -393,10 +393,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.49056602, g: 0.19206122, b: 0.19206122, a: 1}
+  m_Color: {r: 0.4339623, g: 0.07164471, b: 0.07164471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7810720833227548321}
   - component: {fileID: 6667806320553613422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firepoint-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.091, y: 0.054, z: 0}
-  m_LocalScale: {x: 0.03671886, y: 0.04770072, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4057047128958884248}
@@ -484,10 +484,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.49056602, g: 0.19206122, b: 0.19206122, a: 1}
+  m_Color: {r: 0.3584906, g: 0.1538804, b: 0.1538804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

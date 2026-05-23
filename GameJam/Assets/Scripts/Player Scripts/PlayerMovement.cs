@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isRunning = false;
     bool isParrying = false;
-    bool isTouchingGround = false;
+    public bool isTouchingGround = false;
     bool isShooting = false;
     bool isJumping = false;
   //  bool canDoubleJump = false;                         // added

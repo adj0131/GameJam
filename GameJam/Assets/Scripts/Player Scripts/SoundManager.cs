@@ -18,14 +18,12 @@ public class SoundManager : MonoBehaviour
 
     public void ManageWalkAudio()
     {
-        print(playerMovement.isRunning);
         sourceLoop.clip = walkClip;
 
-        if (playerMovement.isRunning)
+        if (playerMovement.isRunning && playerMovement.isTouchingGround)
         {
             if(!sourceLoop.isPlaying)
             {
-                print("starting play");
                 sourceLoop.Play();
             }
         }
@@ -33,7 +31,6 @@ public class SoundManager : MonoBehaviour
         {
             if (sourceLoop.isPlaying)
             {
-                print("stopping play");
                 sourceLoop.Stop();
             }
         }
