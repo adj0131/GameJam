@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        GetComponent<HitFlash>()?.Flash();
     }
 
     void Die()

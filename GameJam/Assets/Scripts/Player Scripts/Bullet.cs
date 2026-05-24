@@ -30,7 +30,16 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        RoboEnemy robo = hitInfo.GetComponent<RoboEnemy>();
+        if (robo != null)
+        {
+            robo.TakeHit();
+            Destroy(gameObject);
+            return;
+        }
     }
+
     void OnEnable()
     {
         Invoke(nameof(DestroySelf), 5f);
@@ -40,5 +49,4 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    
 }
