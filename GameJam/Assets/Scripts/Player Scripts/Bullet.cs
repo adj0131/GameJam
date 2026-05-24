@@ -38,6 +38,12 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        ChainsawEnemy chainsaw = hitInfo.GetComponent<ChainsawEnemy>();
+        if (chainsaw != null)        {
+            chainsaw.TakeHit();
+            Destroy(gameObject);
+            return; 
+        }
     }
 
     void OnEnable()
