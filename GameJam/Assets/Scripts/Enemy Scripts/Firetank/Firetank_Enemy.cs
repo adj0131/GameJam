@@ -146,7 +146,7 @@ public class FireTankEnemy : MonoBehaviour
         if (isDead) return;
         isDead = true;
         isAttacking = false;
-
+        FindAnyObjectByType<PlayerGunUpgrades>().hasTripleShot = true;
         StopAllCoroutines();
 
         if (boxCollider != null)

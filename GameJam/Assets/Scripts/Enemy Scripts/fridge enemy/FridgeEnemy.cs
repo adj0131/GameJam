@@ -185,6 +185,7 @@ public class FridgeEnemy : MonoBehaviour
         if (isDead) return;
         isDead = true;
         isAttacking = false;
+        FindAnyObjectByType<PlayerGunUpgrades>().hasIceShot = true; 
 
         StopAllCoroutines();
 
