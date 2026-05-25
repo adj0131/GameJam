@@ -6,11 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float normalSpeed = 5f;
     [SerializeField] float jumpStrength = 12f;
- //   [SerializeField] float doubleJumpStrength = 10f;    // slightly weaker than first jump
     [SerializeField] float jumpDelay = 0.15f;
     [SerializeField] float gravityScale = 4f;
-    [SerializeField] float runBufferTime = 0.1f; // grace time to let player change direction before causing you to stop running animation
-    [SerializeField] float parryEndLag = 0.1f; // end time where you're stuck after parrying
+    [SerializeField] float runBufferTime = 0.1f;
+    [SerializeField] float parryEndLag = 0.1f;
     [SerializeField] GameObject upgradeEffect;
     float runBufferTimer = 0f;
     public Transform firePoint;
@@ -21,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     SoundManager playerSoundManager;
     PlayerInput inputSystem;
     SceneControl sceneController;
+    PlayerGunUpgrades gunUpgrades; // <-- NEW
 
     public bool isRunning = false;
     bool isUpgrading = false;
@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isTouchingGround = false;
     bool isShooting = false;
     bool isJumping = false;
-  //  bool canDoubleJump = false;                         // added
     public bool isKnockedBack = false;
     bool isInvincible = false;
     int groundLayer;
@@ -50,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidBody.gravityScale = gravityScale;
         playerSoundManager = GetComponent<SoundManager>();
         sceneController = FindAnyObjectByType<SceneControl>();
+        gunUpgrades = GetComponent<PlayerGunUpgrades>(); // <-- NEW
     }
 
     void Update()
@@ -68,17 +68,8 @@ public class PlayerMovement : MonoBehaviour
     void OnJump(InputValue value)
     {
         if (isKnockedBack) return;
-
         if (isTouchingGround && !isJumping)
-        {
-            // normal first jump
             StartCoroutine(Jump());
-        }
-     //   else if (!isTouchingGround && canDoubleJump)
-     //   {
-     //       // double jump in the air
-     //       StartCoroutine(DoubleJump());
-     //   }
     }
 
     void OnParry(InputValue value)
@@ -96,17 +87,16 @@ public class PlayerMovement : MonoBehaviour
     void Run()
     {
         playerSoundManager.ManageWalkAudio();
-        if(isShooting || isParrying || isUpgrading) { return; } // don't bother if you're currently shooting
+        if(isShooting || isParrying || isUpgrading) { return; }
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
 
         bool hasMovementInput = Mathf.Abs(moveInput.x) > Mathf.Epsilon;
 
-        // checks to see if input has been zero for longer than grace period before officially stopping run
         if (hasMovementInput)
         { runBufferTimer = runBufferTime; }
         else
         { runBufferTimer -= Time.deltaTime; }
-        isRunning = runBufferTimer > 0f; // Checks to see if you've run out of grace time
+        isRunning = runBufferTimer > 0f;
 
         if (moveInput.x > 0)
         {
@@ -130,13 +120,15 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(CelebrationSequence());
     }
 
+    // ─── SHOOT ────────────────────────────────────────────────────────────────
+
     IEnumerator Shoot()
     {
         playerSoundManager.playShootAudio();
         myAnimator.SetTrigger("Shooting");
         isShooting = true;
         isRunning = false;
-        myRigidBody.linearVelocityX = 0f; // makes you go stationary while shooting
+        myRigidBody.linearVelocityX = 0f;
 
         yield return new WaitUntil(() =>
         {
@@ -144,8 +136,11 @@ public class PlayerMovement : MonoBehaviour
             return state.normalizedTime >= 3f / 8f && state.IsName("Player_Shoot");
         });
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        // Triple shot if unlocked, otherwise single
+        if (gunUpgrades != null && gunUpgrades.hasTripleShot)
+            SpawnTripleShot();
+        else
+            SpawnSingleBullet(firePoint.rotation);
 
         yield return new WaitUntil(() =>
         {
@@ -155,26 +150,47 @@ public class PlayerMovement : MonoBehaviour
         isShooting = false;
     }
 
+    void SpawnSingleBullet(Quaternion rotation)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+        bullet.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        SetupBullet(bullet);
+    }
+
+    void SpawnTripleShot()
+    {
+        float spread = gunUpgrades.spreadAngle;
+        float[] angles = { 0f, spread, -spread };
+
+        foreach (float angle in angles)
+        {
+            Quaternion rotation = firePoint.rotation * Quaternion.Euler(0f, 0f, angle);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+            bullet.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            SetupBullet(bullet);
+        }
+    }
+
+    // Applies the ice flag to the bullet if the upgrade is unlocked
+    void SetupBullet(GameObject bullet)
+    {
+        Bullet b = bullet.GetComponent<Bullet>();
+        if (b != null && gunUpgrades != null)
+            b.isIce = gunUpgrades.hasIceShot;
+    }
+
+    // ──────────────────────────────────────────────────────────────────────────
+
     IEnumerator Jump()
     {
         playerSoundManager.playJumpAudio();
         isJumping = true;
-     //   canDoubleJump = true;                           // enable double jump after first jump
         myRigidBody.linearVelocityY = jumpStrength;
         myAnimator.SetTrigger("Jumping");
 
         yield return new WaitForSeconds(jumpDelay);
         isJumping = false;
     }
-
-  //  IEnumerator DoubleJump()
-  //  {
-  //      canDoubleJump = false;                          // use it up — no triple jump
-  //      myRigidBody.linearVelocityY = doubleJumpStrength;
-  //      myAnimator.SetTrigger("Jumping");               // reuses same animation
-
-  //      yield return new WaitForSeconds(jumpDelay);
-  //  }
 
     IEnumerator Parry()
     {
@@ -196,21 +212,15 @@ public class PlayerMovement : MonoBehaviour
             return !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Parry");
         });
 
-        yield return new WaitForSecondsRealtime(parryEndLag); // adds a small delay so you don't immediately go back into running
+        yield return new WaitForSecondsRealtime(parryEndLag);
 
         isParrying = false;
         isInvincible = false;
     }
+
     void GroundCheck()
     {
-        bool wasInAir = !isTouchingGround;
         isTouchingGround = myBoxCollider.IsTouchingLayers(groundLayer);
-
-        // reset double jump when landing
-//        if (isTouchingGround && wasInAir)
-//        {
-//            canDoubleJump = false;
-//        }
     }
 
     public void ApplySlow(float slowAmount, float duration)
@@ -239,12 +249,11 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator CelebrationSequence()
     {
         inputSystem.enabled = false;
-        myRigidBody.linearVelocityY = 0.01f; // Give just a tiny bit of right velocity to set sprite direction
-        yield return null; // wait one frame
-        myRigidBody.linearVelocityY = 0f; // Then set velocity to 0
-        myAnimator.SetTrigger("Celebrating"); // Start the animation
+        myRigidBody.linearVelocityY = 0.01f;
+        yield return null;
+        myRigidBody.linearVelocityY = 0f;
+        myAnimator.SetTrigger("Celebrating");
 
-        // wait for gun in the air
         yield return new WaitUntil(() =>
         {
             AnimatorStateInfo state = myAnimator.GetCurrentAnimatorStateInfo(0);
@@ -252,18 +261,14 @@ public class PlayerMovement : MonoBehaviour
         });
 
         SpriteRenderer sr = upgradeEffect.GetComponent<SpriteRenderer>();
-        sr.enabled = true; // turns on the twinkle star
+        sr.enabled = true;
 
-        // Rotate star for the rest of the animation
         while (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Upgrade"))
         {
-            upgradeEffect.transform.Rotate(0f,0f,720f * Time.deltaTime);
-
+            upgradeEffect.transform.Rotate(0f, 0f, 720f * Time.deltaTime);
             yield return null;
         }
 
-        // Once all of this is done, move onto the next scene
         sceneController.LoadNextScene();
-        
     }
 }

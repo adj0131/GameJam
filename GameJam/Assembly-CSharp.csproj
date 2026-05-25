@@ -66,6 +66,7 @@
     <Compile Include="Assets/Scripts/Enemy Scripts/Firetank/FiretankBullet.cs" />
     <Compile Include="Assets/Scripts/SceneControl.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/fridge enemy/IceProjectile.cs" />
+    <Compile Include="Assets/Scripts/Player Scripts/PlayerGunUpgrades.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/PlayerHealth.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/ChainsawEnemy.cs" />

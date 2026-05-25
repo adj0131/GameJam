@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 3036151683424035341}
   - component: {fileID: 54797922650575969}
   - component: {fileID: 2595930031134144475}
+  - component: {fileID: 5540954588045573115}
   m_Layer: 3
   m_Name: RoboEnemy
   m_TagString: Untagged
@@ -312,3 +313,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HitFlash
   flashDuration: 0.1
   flashColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &5540954588045573115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009366511972560799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536442502b02e44a0a09fa40bad85cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcedEffect
+  iceColor: {r: 0.5, g: 0.8, b: 1, a: 1}

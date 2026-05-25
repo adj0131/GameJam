@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 174356304339371644}
   - component: {fileID: 3990326217242254933}
   - component: {fileID: 3159520075620553462}
+  - component: {fileID: 1271730832942258727}
   m_Layer: 8
   m_Name: Firetank
   m_TagString: Untagged
@@ -322,6 +323,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1271730832942258727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146855608649681168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536442502b02e44a0a09fa40bad85cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcedEffect
+  iceColor: {r: 0.5, g: 0.8, b: 1, a: 1}
 --- !u!1 &1171108774841305824
 GameObject:
   m_ObjectHideFlags: 0

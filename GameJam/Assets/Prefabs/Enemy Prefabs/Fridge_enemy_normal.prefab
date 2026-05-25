@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 1786288258633175326}
   - component: {fileID: 7688803242932753005}
   - component: {fileID: 3728656167497170575}
+  - component: {fileID: -3863006892066844402}
   m_Layer: 3
   m_Name: Fridge_enemy_normal
   m_TagString: Untagged
@@ -301,3 +302,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3992275, y: 0.58555317}
   m_EdgeRadius: 0
+--- !u!114 &-3863006892066844402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057650687208771380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536442502b02e44a0a09fa40bad85cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcedEffect
+  iceColor: {r: 0.5, g: 0.8, b: 1, a: 1}

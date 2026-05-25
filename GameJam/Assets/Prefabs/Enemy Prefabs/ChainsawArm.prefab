@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 981883391842406875}
   - component: {fileID: 107690776385830476}
   - component: {fileID: 5184456095133103093}
+  - component: {fileID: -9149679117826611277}
   m_Layer: 8
   m_Name: ChainsawArm
   m_TagString: Untagged
@@ -215,6 +216,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.5754554, y: -0.2466234}
   m_Size: {x: 0.2878952, y: 0.5155489}
   m_Direction: 0
+--- !u!114 &-9149679117826611277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74151502883153069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536442502b02e44a0a09fa40bad85cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcedEffect
+  iceColor: {r: 0.5, g: 0.8, b: 1, a: 1}
 --- !u!1 &6183091396470466166
 GameObject:
   m_ObjectHideFlags: 0

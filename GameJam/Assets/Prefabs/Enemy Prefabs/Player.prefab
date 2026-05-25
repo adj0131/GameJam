@@ -109,10 +109,10 @@ GameObject:
   - component: {fileID: 2968096766199637332}
   - component: {fileID: 5815609862004543301}
   - component: {fileID: 5113798484935883567}
-  - component: {fileID: 2622630798451834314}
   - component: {fileID: 4280324484712826789}
   - component: {fileID: 150749322345692144}
   - component: {fileID: 5603501399894859495}
+  - component: {fileID: 7193434651974682515}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -279,6 +279,7 @@ MonoBehaviour:
   gravityScale: 4
   runBufferTime: 0.1
   parryEndLag: 0.1
+  upgradeEffect: {fileID: 0}
   firePoint: {fileID: 8932310248562261322}
   bulletPrefab: {fileID: 6265511015466234662, guid: d22520039ab3a4e11a567918e4f01fd8, type: 3}
   playerPos: {x: 0, y: 0, z: 0}
@@ -412,19 +413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HitFlash
   flashDuration: 0.1
   flashColor: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &2622630798451834314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840477011327008965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 536442502b02e44a0a09fa40bad85cec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IcedEffect
-  iceColor: {r: 0.5, g: 0.8, b: 1, a: 1}
 --- !u!114 &4280324484712826789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +624,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7193434651974682515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840477011327008965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536442502b02e44a0a09fa40bad85cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcedEffect
+  iceColor: {r: 0.5, g: 0.8, b: 1, a: 1}
 --- !u!1 &4239698074200387287
 GameObject:
   m_ObjectHideFlags: 0
