@@ -432,6 +432,7 @@ MonoBehaviour:
   walkClip: {fileID: 8300000, guid: 9723db3a14f0d7e48bae8e48035f6486, type: 3}
   jumpClip: {fileID: 8300000, guid: 2a186e8cf6f19ef4cad3d3ced3375650, type: 3}
   shootClip: {fileID: 8300000, guid: efc16f1d9db2a82469a0dcb851d55180, type: 3}
+  celebrationClip: {fileID: 8300000, guid: 1e6aefe5832fb7b4bb6d68a7c70bbcea, type: 3}
 --- !u!82 &150749322345692144
 AudioSource:
   m_ObjectHideFlags: 0

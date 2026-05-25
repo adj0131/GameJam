@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class PlayerGunUpgrades : MonoBehaviour
 {
     [Header("Unlocked Upgrades")]
@@ -8,4 +9,16 @@ public class PlayerGunUpgrades : MonoBehaviour
     [Header("Triple Shot Settings")]
     [Tooltip("Angle in degrees between the center bullet and the top/bottom bullets")]
     public float spreadAngle = 12f;
+
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= 4)
+        {
+            hasTripleShot = true;
+        }
+        if (SceneManager.GetActiveScene().buildIndex >= 6)
+        {
+            hasIceShot = true;
+        }
+    }
 }

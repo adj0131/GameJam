@@ -106,6 +106,7 @@ public class RoboEnemy : MonoBehaviour
         if (isDead) return;
         if (lightningProjectilePrefab == null || firePoint == null) return;
 
+        roboAudioSource.Play();
         Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
         GameObject proj = Instantiate(lightningProjectilePrefab, firePoint.position, Quaternion.identity);
         proj.GetComponent<LightningProjectile>().SetDirection(direction);

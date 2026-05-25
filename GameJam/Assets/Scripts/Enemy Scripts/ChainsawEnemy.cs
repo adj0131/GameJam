@@ -37,15 +37,11 @@ public class ChainsawEnemy : MonoBehaviour
             transform.localScale = new Vector3(3.5f, 3.5f, 1);
 
         // Swing animation plays constantly
-        animator.SetBool("isSwinging", true);
+        // animator.SetBool("isSwinging", true);
     }
     void Update()
     {
-        AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
-        if (state.normalizedTime == 0f / 8f)
-        {
-            ChainsawSoundManager.playSwingAudio();
-        }
+
     }
 
     public void TakeHit()
