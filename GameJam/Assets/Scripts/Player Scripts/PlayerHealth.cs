@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -7,47 +8,50 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
+    private bool isDead = false;
+
     void Start()
     {
         if (healthBar == null)
-        {
             healthBar = GetComponentInChildren<HealthBar>();
-        }
 
         currentHealth = maxHealth;
-    healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
     {
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        if (!isDead && currentHealth <= 0)
+            StartCoroutine(Die());
     }
 
     public void TakeDamage(int damage)
     {
+        if (isDead) return;
+
         PlayerMovement player = GetComponent<PlayerMovement>();
 
-        if (player != null && player.isInvincible)
-        {
-            // Completely ignore the hit while parrying
-            return;
-        }
+        // Ignore hits while parrying
+        if (player != null && player.isInvincible) return;
 
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        if (player == null || !player.isInvincible)
-        {
-            GetComponent<HitFlash>()?.Flash();
-        }
+        GetComponent<HitFlash>()?.Flash();
     }
 
-    void Die()
+    IEnumerator Die()
     {
-        // put death animation and stuff in later
-        Debug.Log("Player Died");
+        isDead = true;
+
+        // Disable player input & movement
+        GetComponent<UnityEngine.InputSystem.PlayerInput>().enabled = false;
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+
+        // Wait 2 seconds before game over
+        yield return new WaitForSeconds(2f);
+
+        SceneControl sc = FindAnyObjectByType<SceneControl>();
+        if (sc != null)
+            sc.LoadGameOver();
     }
 }

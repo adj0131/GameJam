@@ -8,38 +8,120 @@ public class SceneControl : MonoBehaviour
     public Image fadeImage;
     [SerializeField] public float fadeDuration = 1f;
 
+    [Header("Game Over")]
+    public GameObject gameOverPanel;
+
+    [Header("You Win")]
+    public GameObject youWinPanel;
+
+    // Gun upgrades — stored here because SceneControl persists across scenes
+    [HideInInspector] public bool hasTripleShot = false;
+    [HideInInspector] public bool hasIceShot = false;
+
     void Awake()
     {
-        DontDestroyOnLoad(gameObject); // makes this persistent. Should be only 1 so don't have to worry about singleton right now
+        DontDestroyOnLoad(gameObject);
     }
+
     public void LoadNextScene()
     {
-        StartCoroutine(FadeAndLoad());
+        // If this is the last scene, trigger you win instead of crashing
+        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextIndex >= SceneManager.sceneCountInBuildSettings)
+            StartCoroutine(YouWinSequence());
+        else
+            StartCoroutine(FadeAndLoad(nextIndex));
+    }
+
+    public void LoadGameOver()
+    {
+        StartCoroutine(GameOverSequence());
     }
 
     public void QuitGame()
     {
         Application.Quit();
     }
-    IEnumerator FadeAndLoad()
+
+    IEnumerator YouWinSequence()
+    {
+        yield return StartCoroutine(FadeIn());
+
+        if (youWinPanel != null)
+        {
+            youWinPanel.SetActive(true);
+            yield return new WaitForSeconds(3f);
+            youWinPanel.SetActive(false);
+        }
+        else
+        {
+            yield return new WaitForSeconds(2f);
+        }
+
+        // Reset upgrades
+        hasTripleShot = false;
+        hasIceShot = false;
+
+        SceneManager.LoadScene("MainMenu");
+        yield return null;
+        yield return StartCoroutine(FadeOut());
+    }
+
+    IEnumerator GameOverSequence()
+    {
+        yield return StartCoroutine(FadeIn());
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            gameOverPanel.SetActive(false);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+        }
+
+        // Reset upgrades
+        hasTripleShot = false;
+        hasIceShot = false;
+
+        SceneManager.LoadScene("MainMenu");
+        yield return null;
+        yield return StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeAndLoad(int sceneIndex)
+    {
+        yield return StartCoroutine(FadeIn());
+        SceneManager.LoadScene(sceneIndex);
+        yield return null;
+        yield return StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeIn()
     {
         float timer = 0f;
         Color color = fadeImage.color;
-
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
-
             color.a = Mathf.Lerp(0f, 1f, timer / fadeDuration);
             fadeImage.color = color;
-
             yield return null;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // finds index of active scene, adds one, then loads next scene
+    }
 
-        // After waiting a single frame (for next scene to load), restore color
-        yield return null;
-        color.a = Mathf.Lerp(0f, 1f, 0f);
-        fadeImage.color = color;
+    IEnumerator FadeOut()
+    {
+        float timer = 0f;
+        Color color = fadeImage.color;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            color.a = Mathf.Lerp(1f, 0f, timer / fadeDuration);
+            fadeImage.color = color;
+            yield return null;
+        }
     }
 }

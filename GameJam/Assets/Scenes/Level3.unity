@@ -414,6 +414,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 25.81315}
   m_EdgeRadius: 0
+--- !u!82 &232533948 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4418377884548469960, guid: e2e905db5bf754fea9ec79d7c6a97bc2, type: 3}
+  m_PrefabInstance: {fileID: 1413475827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &297548119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2018,6 +2023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1616951248}
     m_Modifications:
+    - target: {fileID: 1479082329295425002, guid: e2e905db5bf754fea9ec79d7c6a97bc2, type: 3}
+      propertyPath: sourceSFX
+      value: 
+      objectReference: {fileID: 232533948}
     - target: {fileID: 7460822373014661560, guid: e2e905db5bf754fea9ec79d7c6a97bc2, type: 3}
       propertyPath: m_LocalScale.x
       value: 12

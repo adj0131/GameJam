@@ -283,7 +283,8 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
 
-        sceneController.LoadNextScene();
+        FindAnyObjectByType<SceneControl>().LoadNextScene();
+        
     }
     IEnumerator FindEnemies() 
     { 
