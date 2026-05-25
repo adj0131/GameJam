@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float gravityScale = 4f;
     [SerializeField] float runBufferTime = 0.1f; // grace time to let player change direction before causing you to stop running animation
     [SerializeField] float parryEndLag = 0.1f; // end time where you're stuck after parrying
+    [SerializeField] GameObject upgradeEffect;
     float runBufferTimer = 0f;
     public Transform firePoint;
 
@@ -18,8 +19,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 playerPos;
     Animator myAnimator;
     SoundManager playerSoundManager;
+    PlayerInput inputSystem;
+    SceneControl sceneController;
 
     public bool isRunning = false;
+    bool isUpgrading = false;
     bool isParrying = false;
     public bool isTouchingGround = false;
     bool isShooting = false;
@@ -36,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        inputSystem = GetComponent<PlayerInput>();
+        inputSystem.enabled = true;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBoxCollider = GetComponent<BoxCollider2D>();
@@ -43,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         groundLayer = LayerMask.GetMask("Ground","Obstacles");
         myRigidBody.gravityScale = gravityScale;
         playerSoundManager = GetComponent<SoundManager>();
+        sceneController = FindAnyObjectByType<SceneControl>();
     }
 
     void Update()
@@ -76,19 +83,20 @@ public class PlayerMovement : MonoBehaviour
 
     void OnParry(InputValue value)
     {
+        if (isShooting || isJumping || isUpgrading) { return; }
         StartCoroutine(Parry());
     }
 
     void OnAttack(InputValue value)
     {
-        if (isShooting || isJumping) { return; }
+        if (isShooting || isJumping || isUpgrading) { return; }
         StartCoroutine(Shoot());
     }
 
     void Run()
     {
         playerSoundManager.ManageWalkAudio();
-        if(isShooting || isParrying) { return; } // don't bother if you're currently shooting
+        if(isShooting || isParrying || isUpgrading) { return; } // don't bother if you're currently shooting
         myRigidBody.linearVelocityX = moveInput.x * runSpeed;
 
         bool hasMovementInput = Mathf.Abs(moveInput.x) > Mathf.Epsilon;
@@ -115,6 +123,11 @@ public class PlayerMovement : MonoBehaviour
     void UpdateAnimation()
     {
         myAnimator.SetBool("isRunning", isRunning);
+    }
+
+    public void Celebration()
+    {
+        StartCoroutine(CelebrationSequence());
     }
 
     IEnumerator Shoot()
@@ -221,5 +234,36 @@ public class PlayerMovement : MonoBehaviour
         runSpeed = originalSpeed;
         jumpStrength = originalJump;
         myAnimator.speed = originalAnimSpeed;
+    }
+
+    IEnumerator CelebrationSequence()
+    {
+        inputSystem.enabled = false;
+        myRigidBody.linearVelocityY = 0.01f; // Give just a tiny bit of right velocity to set sprite direction
+        yield return null; // wait one frame
+        myRigidBody.linearVelocityY = 0f; // Then set velocity to 0
+        myAnimator.SetTrigger("Celebrating"); // Start the animation
+
+        // wait for gun in the air
+        yield return new WaitUntil(() =>
+        {
+            AnimatorStateInfo state = myAnimator.GetCurrentAnimatorStateInfo(0);
+            return state.normalizedTime >= 24f / 35f && state.IsName("Player_Upgrade");
+        });
+
+        SpriteRenderer sr = upgradeEffect.GetComponent<SpriteRenderer>();
+        sr.enabled = true; // turns on the twinkle star
+
+        // Rotate star for the rest of the animation
+        while (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Upgrade"))
+        {
+            upgradeEffect.transform.Rotate(0f,0f,720f * Time.deltaTime);
+
+            yield return null;
+        }
+
+        // Once all of this is done, move onto the next scene
+        sceneController.LoadNextScene();
+        
     }
 }
