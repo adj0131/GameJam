@@ -21,8 +21,9 @@ public class FireTankEnemy : MonoBehaviour
     public GameObject deathEffectPrefab;
     public float deathDelay = 1f;
     [SerializeField] AudioClip firetankDeathClip;
-    AudioSource firetankAudioSource;
+    FiretankSoundManager firetankSoundManager;
 
+    public bool isMoving;
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
@@ -36,7 +37,7 @@ public class FireTankEnemy : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
-        firetankAudioSource = GetComponent<AudioSource>();
+        firetankSoundManager = GetComponent<FiretankSoundManager>();
     }
 
     private void Start()
@@ -64,6 +65,7 @@ public class FireTankEnemy : MonoBehaviour
         if (distanceToPlayer <= attackRange)
         {
             myAnimator.SetBool("isRunning", false);
+            isMoving = false;
 
             if (!isAttacking && attackTimer >= attackCooldown)
             {
@@ -81,6 +83,7 @@ public class FireTankEnemy : MonoBehaviour
                     moveSpeed * Time.deltaTime
                 );
                 myAnimator.SetBool("isRunning", true);
+                isMoving = true;
             }
         }
     }
@@ -162,8 +165,7 @@ public class FireTankEnemy : MonoBehaviour
     private IEnumerator DestroyAfterDelay()
     {
         myAnimator.SetTrigger("Death");
-        firetankAudioSource.clip = firetankDeathClip;
-        firetankAudioSource.Play();
+        firetankSoundManager.playDeathAudio();
         yield return new WaitForSeconds(deathDelay);
         Destroy(gameObject);
     }

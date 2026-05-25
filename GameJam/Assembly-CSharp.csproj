@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\Small Enemy\RoboEnemy.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\FiretankSoundManager.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\Firetank\FiretankBullet.cs" />
     <Compile Include="Assets\Scripts\SceneControl.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\fridge enemy\IceProjectile.cs" />
