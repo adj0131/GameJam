@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     SoundManager playerSoundManager;
     PlayerInput inputSystem;
     SceneControl sceneController;
+    SpriteRenderer sr;
 
     public bool isRunning = false;
     bool isUpgrading = false;
@@ -50,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
         myRigidBody.gravityScale = gravityScale;
         playerSoundManager = GetComponent<SoundManager>();
         sceneController = FindAnyObjectByType<SceneControl>();
+        sr = upgradeEffect.GetComponent<SpriteRenderer>();
+        sr.enabled = false;
     }
 
     void Update()
@@ -251,7 +254,6 @@ public class PlayerMovement : MonoBehaviour
             return state.normalizedTime >= 24f / 35f && state.IsName("Player_Upgrade");
         });
 
-        SpriteRenderer sr = upgradeEffect.GetComponent<SpriteRenderer>();
         sr.enabled = true; // turns on the twinkle star
 
         // Rotate star for the rest of the animation
