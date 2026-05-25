@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject upgradeEffect;
     float runBufferTimer = 0f;
     public Transform firePoint;
+    Transform enemyGroup;
 
     public GameObject bulletPrefab;
     public Vector3 playerPos;
@@ -20,9 +21,11 @@ public class PlayerMovement : MonoBehaviour
     SoundManager playerSoundManager;
     PlayerInput inputSystem;
     SceneControl sceneController;
+    SpriteRenderer sr;
     PlayerGunUpgrades gunUpgrades; // <-- NEW
 
     public bool isRunning = false;
+    bool levelEnding = false;
     bool isUpgrading = false;
     bool isParrying = false;
     public bool isTouchingGround = false;
@@ -49,7 +52,10 @@ public class PlayerMovement : MonoBehaviour
         myRigidBody.gravityScale = gravityScale;
         playerSoundManager = GetComponent<SoundManager>();
         sceneController = FindAnyObjectByType<SceneControl>();
+        sr = upgradeEffect.GetComponent<SpriteRenderer>();
+        sr.enabled = false;
         gunUpgrades = GetComponent<PlayerGunUpgrades>(); // <-- NEW
+        StartCoroutine(FindEnemies());
     }
 
     void Update()
@@ -57,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isKnockedBack) Run();
         GroundCheck();
         UpdateAnimation();
+        CheckForEnemies();
         playerPos = transform.position;
     }
 
@@ -109,7 +116,13 @@ public class PlayerMovement : MonoBehaviour
             firePoint.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
-
+    void CheckForEnemies() 
+    {
+        if (!levelEnding && enemyGroup != null && enemyGroup.childCount == 0) 
+        { 
+            levelEnding = true; StartCoroutine(CelebrationSequence()); 
+        } 
+    }
     void UpdateAnimation()
     {
         myAnimator.SetBool("isRunning", isRunning);
@@ -260,15 +273,28 @@ public class PlayerMovement : MonoBehaviour
             return state.normalizedTime >= 24f / 35f && state.IsName("Player_Upgrade");
         });
 
-        SpriteRenderer sr = upgradeEffect.GetComponent<SpriteRenderer>();
         sr.enabled = true;
 
-        while (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Upgrade"))
+        while (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Upgrade") && myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
         {
             upgradeEffect.transform.Rotate(0f, 0f, 720f * Time.deltaTime);
             yield return null;
         }
 
         sceneController.LoadNextScene();
+    }
+    IEnumerator FindEnemies() 
+    { 
+        yield return null; 
+        print("test"); 
+        GameObject enemiesObject = GameObject.Find("Enemies"); 
+        if (enemiesObject != null) 
+        { 
+            enemyGroup = enemiesObject.transform; print("found enemy group"); 
+        } 
+        else 
+        { 
+            Debug.LogError("Could not find Enemies object"); 
+        } 
     }
 }
