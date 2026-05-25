@@ -1036,6 +1036,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 786845178884909050, guid: 5050cfa907d414563b125e978f3eb47b, type: 3}
   m_PrefabInstance: {fileID: 2085091577}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &617602624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1839625404521829748, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
+  m_PrefabInstance: {fileID: 7235224572427642169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &653765818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,16 +1138,6 @@ PrefabInstance:
 --- !u!4 &726747089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 887667609791553442, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
-  m_PrefabInstance: {fileID: 7235224572427642169}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &726747100 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1966876620029061804, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
-  m_PrefabInstance: {fileID: 7235224572427642169}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &726747101 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 915997665722899618, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
   m_PrefabInstance: {fileID: 7235224572427642169}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &743527319
@@ -4593,6 +4588,10 @@ PrefabInstance:
       propertyPath: jumpStrength
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1152667780573454450, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
+      propertyPath: upgradeEffect
+      value: 
+      objectReference: {fileID: 617602624}
     - target: {fileID: 1840477011327008965, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4636,11 +4635,11 @@ PrefabInstance:
     - target: {fileID: 7335467174089877945, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
       propertyPath: sourceSFX
       value: 
-      objectReference: {fileID: 726747100}
+      objectReference: {fileID: 0}
     - target: {fileID: 7335467174089877945, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
       propertyPath: sourceLoop
       value: 
-      objectReference: {fileID: 726747101}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

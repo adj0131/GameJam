@@ -29,9 +29,20 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        PlayerMovement player = GetComponent<PlayerMovement>();
+
+        if (player != null && player.isInvincible)
+        {
+            // Completely ignore the hit while parrying
+            return;
+        }
+
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        GetComponent<HitFlash>()?.Flash();
+        if (player == null || !player.isInvincible)
+        {
+            GetComponent<HitFlash>()?.Flash();
+        }
     }
 
     void Die()
