@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runBufferTime = 0.1f; // grace time to let player change direction before causing you to stop running animation
     [SerializeField] float parryEndLag = 0.1f; // end time where you're stuck after parrying
     [SerializeField] GameObject upgradeEffect;
+    Transform enemyGroup;
     float runBufferTimer = 0f;
     public Transform firePoint;
 
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sr;
 
     public bool isRunning = false;
+    bool levelEnding = false;
     bool isUpgrading = false;
     bool isParrying = false;
     public bool isTouchingGround = false;
@@ -53,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         sceneController = FindAnyObjectByType<SceneControl>();
         sr = upgradeEffect.GetComponent<SpriteRenderer>();
         sr.enabled = false;
+        StartCoroutine(FindEnemies());
     }
 
     void Update()
@@ -60,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isKnockedBack) Run();
         GroundCheck();
         UpdateAnimation();
+        CheckForEnemies();
         playerPos = transform.position;
     }
 
@@ -122,15 +126,19 @@ public class PlayerMovement : MonoBehaviour
             firePoint.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
-
+    void CheckForEnemies()
+    {
+        if (!levelEnding &&
+            enemyGroup != null &&
+            enemyGroup.childCount == 0)
+        {
+            levelEnding = true;
+            StartCoroutine(CelebrationSequence());
+        }
+    }
     void UpdateAnimation()
     {
         myAnimator.SetBool("isRunning", isRunning);
-    }
-
-    public void Celebration()
-    {
-        StartCoroutine(CelebrationSequence());
     }
 
     IEnumerator Shoot()
@@ -267,5 +275,20 @@ public class PlayerMovement : MonoBehaviour
         // Once all of this is done, move onto the next scene
         sceneController.LoadNextScene();
         
+    }
+    IEnumerator FindEnemies()
+    {
+        yield return null;
+
+        GameObject enemiesObject = GameObject.Find("Enemies");
+
+        if (enemiesObject != null)
+        {
+            enemyGroup = enemiesObject.transform;
+        }
+        else
+        {
+            Debug.LogError("Could not find Enemies object");
+        }
     }
 }
