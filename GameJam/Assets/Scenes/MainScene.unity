@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   enemyPrefab: {fileID: 0}
-  playerScript: {fileID: 1695021824}
+  playerScript: {fileID: 0}
   enemyMask:
     serializedVersion: 2
     m_Bits: 8
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1695021823}
+    TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -2089,22 +2089,6 @@ Transform:
   - {fileID: 942811452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1695021823 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4608507290358174867, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
-  m_PrefabInstance: {fileID: 8617127578934017677}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1695021824 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 848887277680197163, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
-  m_PrefabInstance: {fileID: 8617127578934017677}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012c261dddf562445977b4e80f36116e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1 &1698551821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2332,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 887667609791553442, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 887667609791553442, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.88
+      objectReference: {fileID: 0}
     - target: {fileID: 3527063611931061522, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
       propertyPath: m_Name
       value: Player

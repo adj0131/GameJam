@@ -71,6 +71,7 @@
     <Compile Include="Assets/Scripts/Enemy Scripts/ChainsawEnemy.cs" />
     <Compile Include="Assets/Scripts/Player Scripts/HealthBar.cs" />
     <Compile Include="Assets/Scripts/HitFlash.cs" />
+    <Compile Include="Assets/Scripts/EnemySpawnTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
