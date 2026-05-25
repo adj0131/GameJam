@@ -3725,6 +3725,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1193986168}
+    - target: {fileID: 5815609862004543301, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815609862004543301, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
+      propertyPath: currentHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7335467174089877945, guid: e6c2ceefc05384367bebd7f4597d9a1c, type: 3}
       propertyPath: sourceSFX
       value: 
