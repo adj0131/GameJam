@@ -90,6 +90,7 @@ public class FireTankEnemy : MonoBehaviour
 
     private IEnumerator ShootBurst()
     {
+        firetankSoundManager.playShootAudio();
         isAttacking = true;
         myAnimator.SetBool("isRunning", false);
         myAnimator.SetTrigger("Shoot");
