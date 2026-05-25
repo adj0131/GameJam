@@ -1,9 +1,4 @@
 using UnityEngine;
-
-// Example (call this from whatever handles boss defeat):
-//   FindAnyObjectByType<PlayerGunUpgrades>().hasTripleShot = true;  // after Level 1 boss
-//   FindAnyObjectByType<PlayerGunUpgrades>().hasIceShot = true;     // after Level 2 boss
-
 public class PlayerGunUpgrades : MonoBehaviour
 {
     [Header("Unlocked Upgrades")]
