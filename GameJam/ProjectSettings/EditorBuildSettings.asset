@@ -12,13 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/OpeningMovie.unity
     guid: 61ff08b8045727147864cbe83f93bc70
   - enabled: 1
-    path: Assets/Scenes/Level-1.unity
-    guid: 9ab3acca7063d4892996a39e9082d0b1
+    path: Assets/Scenes/Level 4.unity
+    guid: 55be0e957567e495596c14e50c75c111
   - enabled: 1
     path: Assets/Scenes/FirstCelebration.unity
     guid: e68e6c5c6a74aed4a92c661afa24315e
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 147497e5faeec44e3884a8be5bb1f085
+  - enabled: 1
+    path: Assets/Scenes/SecondCelebration.unity
+    guid: f414e97e672c59f4986679101c3fb8a6
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 1645299b70de74437812d73546cbf782
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

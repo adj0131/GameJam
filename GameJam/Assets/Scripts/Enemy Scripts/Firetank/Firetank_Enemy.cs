@@ -47,6 +47,7 @@ public class FireTankEnemy : MonoBehaviour
 
     private void Update()
     {
+        firetankSoundManager.ManageWalkAudio();
         if (isDead || player == null) return;
 
         attackTimer += Time.deltaTime;

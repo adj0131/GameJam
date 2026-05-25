@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip walkClip;
     [SerializeField] AudioClip jumpClip;
     [SerializeField] AudioClip shootClip;
+    [SerializeField] AudioClip celebrationClip;
 
     PlayerMovement playerMovement;
 
@@ -43,6 +44,11 @@ public class SoundManager : MonoBehaviour
     public void playShootAudio()
     {
         sourceSFX.clip = shootClip;
+        sourceSFX.Play();
+    }
+    public void playCelebrateAudio()
+    {
+        sourceSFX.clip = celebrationClip;
         sourceSFX.Play();
     }
 }

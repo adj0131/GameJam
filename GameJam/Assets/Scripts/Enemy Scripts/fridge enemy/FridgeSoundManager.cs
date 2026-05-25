@@ -1,26 +1,27 @@
 using UnityEngine;
 
-public class FiretankSoundManager : MonoBehaviour
+public class FridgeSoundManager : MonoBehaviour
 {
     [SerializeField] AudioSource sourceLoop;
     [SerializeField] AudioSource sourceSFX;
 
     [SerializeField] AudioClip walkClip;
     [SerializeField] AudioClip shootClip;
+    [SerializeField] AudioClip swingClip;
     [SerializeField] AudioClip deathClip;
 
-    FireTankEnemy firetankControl;
+    FridgeEnemy fridgeControl;
 
     void Start()
     {
-        firetankControl = GetComponent<FireTankEnemy>();
+        fridgeControl = GetComponent<FridgeEnemy>();
     }
 
     public void ManageWalkAudio()
     {
         sourceLoop.clip = walkClip;
 
-        if (firetankControl.isMoving)
+        if (fridgeControl.isMoving)
         {
             if (!sourceLoop.isPlaying)
             {
@@ -44,6 +45,11 @@ public class FiretankSoundManager : MonoBehaviour
     public void playDeathAudio()
     {
         sourceSFX.clip = deathClip;
+        sourceSFX.Play();
+    }
+    public void playSwingAudio()
+    {
+        sourceSFX.clip = swingClip;
         sourceSFX.Play();
     }
 }

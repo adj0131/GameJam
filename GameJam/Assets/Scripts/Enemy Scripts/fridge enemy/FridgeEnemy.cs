@@ -19,6 +19,7 @@ public class FridgeEnemy : MonoBehaviour
     public GameObject chainsawArm;
     private bool isPhase2 = false;
     private float chainsawTimer = 0f;
+    public bool isMoving = false;
 
     [Header("Shooting")]
     public GameObject iceProjectilePrefab;
@@ -35,12 +36,14 @@ public class FridgeEnemy : MonoBehaviour
     private bool isDead = false;
     private bool isAttacking = false;
     private float attackTimer = 0f;
+    FridgeSoundManager fridgeSoundManager;
 
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        fridgeSoundManager = GetComponent<FridgeSoundManager>();
     }
 
     private void Start()
@@ -50,6 +53,7 @@ public class FridgeEnemy : MonoBehaviour
 
     private void Update()
     {
+        fridgeSoundManager.ManageWalkAudio();
         if (isDead || target == null) return;
 
         attackTimer += Time.deltaTime;
@@ -77,6 +81,7 @@ public class FridgeEnemy : MonoBehaviour
         {
             chainsawTimer = 0f;
             ChainsawAttack();
+            fridgeSoundManager.playSwingAudio();
         }
 
         if (!isAttacking)
@@ -89,6 +94,7 @@ public class FridgeEnemy : MonoBehaviour
         {
             attackTimer = 0f;
             StartCoroutine(ShootProjectile());
+            fridgeSoundManager.playShootAudio();
         }
     }
 
@@ -110,6 +116,7 @@ public class FridgeEnemy : MonoBehaviour
                 moveSpeed * Time.deltaTime
             );
             myAnimator.SetBool("isWalking", true);
+            isMoving = true;
         }
         else if (distanceToTarget > preferredRange)
         {
@@ -120,10 +127,12 @@ public class FridgeEnemy : MonoBehaviour
                 moveSpeed * Time.deltaTime
             );
             myAnimator.SetBool("isWalking", true);
+            isMoving = true;
         }
         else
         {
             myAnimator.SetBool("isWalking", false);
+            isMoving = false;
         }
     }
 
@@ -131,6 +140,7 @@ public class FridgeEnemy : MonoBehaviour
     {
         isAttacking = true;
         myAnimator.SetBool("isWalking", false);
+        isMoving = false;
         myAnimator.SetTrigger("Shoot");
 
         // Wait for freezer door to open in animation
@@ -183,6 +193,7 @@ public class FridgeEnemy : MonoBehaviour
     private void Die()
     {
         if (isDead) return;
+        fridgeSoundManager.playDeathAudio();
         isDead = true;
         isAttacking = false;
         FindAnyObjectByType<PlayerGunUpgrades>().hasIceShot = true; 

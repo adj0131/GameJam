@@ -54,6 +54,7 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\Firetank\Firetank_Enemy.cs" />
     <Compile Include="Assets\Scripts\Object Scripts\Weapons.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\Small Enemy\LightningProjectile.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\fridge enemy\FridgeSoundManager.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\fridge enemy\IcedEffects.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\ChainsawDamage.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\fridge enemy\FridgeEnemy.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\HitFlash.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\chainsawSoundManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

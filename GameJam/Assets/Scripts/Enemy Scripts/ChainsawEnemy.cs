@@ -14,6 +14,7 @@ public class ChainsawEnemy : MonoBehaviour
     [SerializeField] GameObject deathEffectPrefab;
     [SerializeField] float deathDelay = 1f;
     [SerializeField] AudioClip deathClip;
+    chainsawSoundManager ChainsawSoundManager;
     private AudioSource audioSource;
 
     [Header("Animator")]
@@ -27,6 +28,7 @@ public class ChainsawEnemy : MonoBehaviour
         currentHits = maxHits;
         col = GetComponent<Collider2D>();
         audioSource = GetComponent<AudioSource>();
+        ChainsawSoundManager = GetComponent<chainsawSoundManager>();
 
         // Flip based on inspector toggle
         if (facingLeft)
@@ -36,6 +38,14 @@ public class ChainsawEnemy : MonoBehaviour
 
         // Swing animation plays constantly
         animator.SetBool("isSwinging", true);
+    }
+    void Update()
+    {
+        AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+        if (state.normalizedTime == 0f / 8f)
+        {
+            ChainsawSoundManager.playSwingAudio();
+        }
     }
 
     public void TakeHit()
@@ -48,6 +58,7 @@ public class ChainsawEnemy : MonoBehaviour
 
     private void Die()
     {
+        ChainsawSoundManager.playDeathAudio();
         if (isDead) return;
         isDead = true;
 

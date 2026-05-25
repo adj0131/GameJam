@@ -261,6 +261,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator CelebrationSequence()
     {
+        playerSoundManager.playCelebrateAudio();
         inputSystem.enabled = false;
         myRigidBody.linearVelocityY = 0.01f;
         yield return null;
