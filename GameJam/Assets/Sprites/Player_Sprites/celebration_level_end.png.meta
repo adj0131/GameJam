@@ -1,0 +1,1029 @@
+fileFormatVersion: 2
+guid: 67c8d38de4eb58547baa9aaedd687cb8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8192645510863470583
+    second: celebration_level_end_0
+  - first:
+      213: 6649567861909372321
+    second: celebration_level_end_1
+  - first:
+      213: -2986884022775137054
+    second: celebration_level_end_2
+  - first:
+      213: -3566049531671592865
+    second: celebration_level_end_3
+  - first:
+      213: -6980554899801453363
+    second: celebration_level_end_4
+  - first:
+      213: -12862602341536501
+    second: celebration_level_end_5
+  - first:
+      213: -5288761522662885598
+    second: celebration_level_end_6
+  - first:
+      213: 6955719666292676141
+    second: celebration_level_end_7
+  - first:
+      213: 3867448293714927460
+    second: celebration_level_end_8
+  - first:
+      213: -7930819288049809046
+    second: celebration_level_end_9
+  - first:
+      213: 2619762694869041668
+    second: celebration_level_end_10
+  - first:
+      213: 172015573226456709
+    second: celebration_level_end_11
+  - first:
+      213: -6327246313409108167
+    second: celebration_level_end_12
+  - first:
+      213: -6098768602967840149
+    second: celebration_level_end_13
+  - first:
+      213: 1343624606137701353
+    second: celebration_level_end_14
+  - first:
+      213: 4413522719047254518
+    second: celebration_level_end_15
+  - first:
+      213: 4342849369370210765
+    second: celebration_level_end_16
+  - first:
+      213: -5835830881997735407
+    second: celebration_level_end_17
+  - first:
+      213: -7385412156818423495
+    second: celebration_level_end_18
+  - first:
+      213: -12278034780256405
+    second: celebration_level_end_19
+  - first:
+      213: -4185013518914298634
+    second: celebration_level_end_20
+  - first:
+      213: -3500664672050817261
+    second: celebration_level_end_21
+  - first:
+      213: 2931500067588445367
+    second: celebration_level_end_22
+  - first:
+      213: 1629167916107923532
+    second: celebration_level_end_23
+  - first:
+      213: 4424281694365325078
+    second: celebration_level_end_24
+  - first:
+      213: -501548911237530954
+    second: celebration_level_end_25
+  - first:
+      213: -1936434275799331396
+    second: celebration_level_end_26
+  - first:
+      213: 6442827685474540672
+    second: celebration_level_end_27
+  - first:
+      213: 1417411921795764022
+    second: celebration_level_end_28
+  - first:
+      213: -7634607262765109161
+    second: celebration_level_end_29
+  - first:
+      213: -7789189633160760048
+    second: celebration_level_end_30
+  - first:
+      213: 8837733075116304428
+    second: celebration_level_end_31
+  - first:
+      213: 3335822897879230231
+    second: celebration_level_end_32
+  - first:
+      213: 282977795235319509
+    second: celebration_level_end_33
+  - first:
+      213: -6501882093994787171
+    second: celebration_level_end_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: celebration_level_end_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 804
+        width: 46
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff37b58faf12b170800000000000000
+      internalID: 8192645510863470583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 804
+        width: 39
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad36fe4db2084c50800000000000000
+      internalID: 6649567861909372321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 804
+        width: 41
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecb2357ec47c86d0800000000000000
+      internalID: -2986884022775137054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_3
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 804
+        width: 39
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50444d38d8d28ec0800000000000000
+      internalID: -3566049531671592865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 704
+        width: 39
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dccc83e9d46102f90800000000000000
+      internalID: -6980554899801453363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 704
+        width: 39
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0dab84088d42dff0800000000000000
+      internalID: -12862602341536501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_6
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 704
+        width: 43
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227bceb8a6b8a96b0800000000000000
+      internalID: -5288761522662885598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_7
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 704
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26d29afe2ea78060800000000000000
+      internalID: 6955719666292676141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 604
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f91168bbfeba530800000000000000
+      internalID: 3867448293714927460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 604
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6989f570e110f190800000000000000
+      internalID: -7930819288049809046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 604
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4024d777a444b5420800000000000000
+      internalID: 2619762694869041668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 604
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5868ff1a04f136200800000000000000
+      internalID: 172015573226456709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 504
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937a9da400b1138a0800000000000000
+      internalID: -6327246313409108167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_13
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 504
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6aebcca442dc5ba0800000000000000
+      internalID: -6098768602967840149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_14
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 504
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3df40e57385a210800000000000000
+      internalID: 1343624606137701353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_15
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 504
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f18de4778bff3d30800000000000000
+      internalID: 4413522719047254518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_16
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 404
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc13756fd76e44c30800000000000000
+      internalID: 4342849369370210765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 404
+        width: 44
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a354d7bb6f20fa0800000000000000
+      internalID: -5835830881997735407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 404
+        width: 42
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9318cf0e5ceb18990800000000000000
+      internalID: -7385412156818423495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_19
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 404
+        width: 44
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b670262413164dff0800000000000000
+      internalID: -12278034780256405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_20
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 304
+        width: 43
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcd7e0b068dbe5c0800000000000000
+      internalID: -4185013518914298634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_21
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 304
+        width: 38
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317d6a037042b6fc0800000000000000
+      internalID: -3500664672050817261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_22
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 304
+        width: 38
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b494ab97c7cea820800000000000000
+      internalID: 2931500067588445367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_23
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 304
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4083178697fb9610800000000000000
+      internalID: 1629167916107923532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 204
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61798ea92c4366d30800000000000000
+      internalID: 4424281694365325078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_25
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 204
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6baf33c2ce32a09f0800000000000000
+      internalID: -501548911237530954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_26
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 204
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd071c29476025e0800000000000000
+      internalID: -1936434275799331396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_27
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 204
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c13c5f4a5896950800000000000000
+      internalID: 6442827685474540672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 104
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f4a0312a8aba310800000000000000
+      internalID: 1417411921795764022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_29
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 104
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750b447f42d6c0690800000000000000
+      internalID: -7634607262765109161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_30
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 104
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0153c4b2c4d37e390800000000000000
+      internalID: -7789189633160760048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_31
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 104
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c282702586fe5aa70800000000000000
+      internalID: 8837733075116304428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_32
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717a4bd60493b4e20800000000000000
+      internalID: 3335822897879230231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_33
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 4
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de03543ec65de300800000000000000
+      internalID: 282977795235319509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celebration_level_end_34
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 4
+        width: 38
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9eb7f71faca4c5a0800000000000000
+      internalID: -6501882093994787171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c959cd4f6c6f3ee498d25c2055092ab0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      celebration_level_end_0: 8192645510863470583
+      celebration_level_end_1: 6649567861909372321
+      celebration_level_end_10: 2619762694869041668
+      celebration_level_end_11: 172015573226456709
+      celebration_level_end_12: -6327246313409108167
+      celebration_level_end_13: -6098768602967840149
+      celebration_level_end_14: 1343624606137701353
+      celebration_level_end_15: 4413522719047254518
+      celebration_level_end_16: 4342849369370210765
+      celebration_level_end_17: -5835830881997735407
+      celebration_level_end_18: -7385412156818423495
+      celebration_level_end_19: -12278034780256405
+      celebration_level_end_2: -2986884022775137054
+      celebration_level_end_20: -4185013518914298634
+      celebration_level_end_21: -3500664672050817261
+      celebration_level_end_22: 2931500067588445367
+      celebration_level_end_23: 1629167916107923532
+      celebration_level_end_24: 4424281694365325078
+      celebration_level_end_25: -501548911237530954
+      celebration_level_end_26: -1936434275799331396
+      celebration_level_end_27: 6442827685474540672
+      celebration_level_end_28: 1417411921795764022
+      celebration_level_end_29: -7634607262765109161
+      celebration_level_end_3: -3566049531671592865
+      celebration_level_end_30: -7789189633160760048
+      celebration_level_end_31: 8837733075116304428
+      celebration_level_end_32: 3335822897879230231
+      celebration_level_end_33: 282977795235319509
+      celebration_level_end_34: -6501882093994787171
+      celebration_level_end_4: -6980554899801453363
+      celebration_level_end_5: -12862602341536501
+      celebration_level_end_6: -5288761522662885598
+      celebration_level_end_7: 6955719666292676141
+      celebration_level_end_8: 3867448293714927460
+      celebration_level_end_9: -7930819288049809046
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
