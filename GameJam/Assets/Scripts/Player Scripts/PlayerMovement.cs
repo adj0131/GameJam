@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     bool isShooting = false;
     bool isJumping = false;
     public bool isKnockedBack = false;
-    bool isInvincible = false;
+    public bool isInvincible = false;
     int groundLayer;
     Rigidbody2D myRigidBody;
     BoxCollider2D myBoxCollider;
@@ -212,13 +212,13 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetTrigger("Parrying");
         myRigidBody.linearVelocityX = 0f;
 
+        isInvincible = true;
+
         yield return new WaitUntil(() =>
         {
             AnimatorStateInfo state = myAnimator.GetCurrentAnimatorStateInfo(0);
             return state.normalizedTime >= 6f / 12f && state.IsName("Player_Parry");
         });
-
-        isInvincible = true;
 
         yield return new WaitUntil(() =>
         {
@@ -227,8 +227,8 @@ public class PlayerMovement : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(parryEndLag);
 
-        isParrying = false;
         isInvincible = false;
+        isParrying = false;
     }
 
     void GroundCheck()
