@@ -1,115 +1,66 @@
-# Welcome to the Junkyard
+# Welcome to the Junkyard (GMTK Game Jam 2026)
 
-This repository contains a Unity game created for the **GMTK Summer Game Jam 2026**.
+This repository contains the Unity source project for **Welcome to the Junkyard**, created for the **GMTK Summer Game Jam 2026**.
 
-The game was developed by a team of four and placed in the **top 18% of entries**.
+- Team size: 4
+- Jam result: Top 18%
+- Engine: Unity `6000.4.7f1`
 
-> **Jam:** GMTK Summer Game Jam 2026  
-> **Game:** Welcome to the Junkyard  
-> **Result:** Top 18%
+## Current repository purpose
 
-## Play the game
+This repo is intended to preserve and collaborate on the **project source files** (assets, scripts, package manifest, and project settings), not generated local files or build output.
 
-Play the finished game and find more information on itch.io:
+If you only want to play the game, use the itch.io page:
 
-**[Welcome to the Junkyard on itch.io](https://dark-subtilizer.itch.io/welcome-to-the-junkyard)**
+- https://dark-subtilizer.itch.io/welcome-to-the-junkyard
 
-A Windows build is also included in the `GameJam/Final Windows Build/` directory. To play it:
+## Prerequisites
 
-1. Open the `GameJam/Final Windows Build/` folder.
-2. Run the included game executable.
-3. Keep the executable in the same folder as its accompanying data files.
+- Unity Hub
+- Unity Editor `6000.4.7f1`
 
-If you prefer to use the earlier build, check the `GameJam/Build 1/` directory.
+## Open the project
 
-> GitHub may not display or run binary build files directly in the browser. Download the repository or the build folder before launching the game.
+1. Clone or download this repository.
+2. In Unity Hub, choose **Add/Open project**.
+3. Select: `GameJam/` (the Unity project folder inside the repo).
+4. Let Unity finish importing.
+5. Open a scene from `Assets/Scenes/` (for example `MainMenu.unity`).
 
-## About the project
+## Important folders/files
 
-`Welcome to the Junkyard` is a Unity-based game project featuring multiple levels, animated scenes, enemies, player systems, audio, visual effects, and video sequences. The repository contains the source project as well as Windows builds for playing the submitted game.
+Inside `GameJam/`:
 
-## Features and content
+- `Assets/` — game content (scenes, scripts, prefabs, sprites, sounds, animations, videos)
+- `Packages/manifest.json` and `Packages/packages-lock.json` — Unity package definitions
+- `ProjectSettings/` — shared Unity project configuration
 
-- Multiple playable levels
-- Main menu and scene transitions
-- Player gameplay systems
-- Enemy spawning and enemy-related gameplay scripts
-- Hit effects and visual feedback
-- Celebration and completion scenes
-- Opening movie/video sequence
-- 2D sprites, animations, sounds, prefabs, and materials
-- Windows builds included in the repository
+## Scene files currently present
 
-## Technology
+- `MainMenu.unity`
+- `OpeningMovie.unity`
+- `MainScene.unity`
+- `Level-1.unity`
+- `Level2.unity`
+- `Level3.unity`
+- `Level 4.unity`
+- `FirstCelebration.unity`
+- `SecondCelebration.unity`
+- `Congrats.unity`
 
-- **Game engine:** Unity `6000.4.7f1`
-- **Primary language:** C#
-- **Rendering and materials:** ShaderLab and HLSL
-- **Platform:** Windows build included
-- **Project type:** Unity game
+## Contribution notes
 
-## Repository structure
+Please avoid committing local-only/generated artifacts such as:
 
-```text
-GameJam/
-├── GameJam/
-│   ├── Assets/
-│   │   ├── Animations/       # Animation assets
-│   │   ├── InputSystem/      # Input configuration and actions
-│   │   ├── Prefabs/          # Reusable Unity prefabs
-│   │   ├── Scenes/           # Menus, levels, cutscenes, and endings
-│   │   ├── Scripts/          # Gameplay and scene-control scripts
-│   │   ├── Settings/         # Project and rendering settings
-│   │   ├── Sounds/           # Audio assets
-│   │   ├── Sprites/          # 2D artwork
-│   │   └── Videos/           # Video assets
-│   ├── Packages/             # Unity package configuration
-│   ├── ProjectSettings/      # Unity project settings
-│   ├── Build 1/              # Development build files
-│   ├── Final Windows Build/  # Final Windows build files
-│   └── GameJam.slnx          # IDE solution file
-└── README.md
-```
+- Unity cache/build folders (`Library/`, `Temp/`, `Logs/`, `Build*/`, etc.)
+- IDE-generated files (`.vs/`, `.idea/`, `.vscode/`, `*.csproj`, `*.sln*`)
+- OS-specific files (`.DS_Store`, `Thumbs.db`, `Desktop.ini`)
+- Build archives or exported binaries (`*.zip`, standalone build folders)
 
-## Open the project in Unity
+## Unknowns / intentionally not assumed
 
-To inspect or continue development:
-
-1. Install **Unity 6000.4.7f1** through Unity Hub.
-2. Clone or download this repository.
-3. In Unity Hub, select **Add** or **Open**.
-4. Choose the `GameJam/GameJam/` directory as the Unity project folder.
-5. Open the project and allow Unity to import the assets.
-6. Start from `Assets/Scenes/MainMenu.unity` or open another scene from the `Assets/Scenes/` directory.
-
-### Suggested scenes
-
-- `MainMenu.unity` — Main menu
-- `OpeningMovie.unity` — Opening sequence
-- `MainScene.unity` — Main gameplay scene
-- `Level-1.unity` — Level 1
-- `Level2.unity` — Level 2
-- `Level3.unity` — Level 3
-- `Level 4.unity` — Level 4
-- `Congrats.unity` — Completion scene
-
-## Team
-
-This game was created collaboratively by a team of four:
-
-- **Pranav** — Programmer and Unity game development
-- **Andrew** — Programmer and Unity game development
-- **Peet** — 3D artist
-- **Sound artist** — Sound design and audio
-
-## Game Jam result
-
-This project was made for the **GMTK Summer Game Jam 2026** and achieved a placement in the **top 18% of submitted entries**.
-
-## Development notes
-
-The project was created under game-jam time constraints. Some folders contain generated Unity and IDE files because this repository is intended to preserve the complete jam project and shared files. When making changes, edit the source assets under `GameJam/Assets/` and use Unity to create new builds.
+This repository does not currently include automated tests, CI build scripts, or a documented command-line build pipeline. Use the Unity Editor for running and building unless a workflow is added later.
 
 ## License
 
-No license has been specified for this repository. Unless a license is added, all rights are reserved by the copyright holders.
+No license has been specified in this repository. Until one is added, all rights remain with the project owners.
