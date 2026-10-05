@@ -99,7 +99,7 @@ This game was created collaboratively by a team of four:
 
 - **Pranav** — Programmer and Unity game development
 - **Andrew** — Programmer and Unity game development
-- **Peet** — Highly skilled 3D artist
+- **Peet** — 3D artist
 - **Sound artist** — Sound design and audio
 
 ## Game Jam result
