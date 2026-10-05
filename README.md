@@ -1,15 +1,32 @@
-# GMTK Summer Game Jam 2026 Project
+# Welcome to the Junkyard
 
 This repository contains a Unity game created for the **GMTK Summer Game Jam 2026**.
 
-The project was submitted as a game-jam collaboration and placed in the **top 18% of entries**.
+The game was developed by a team of four and placed in the **top 18% of entries**.
 
 > **Jam:** GMTK Summer Game Jam 2026  
+> **Game:** Welcome to the Junkyard  
 > **Result:** Top 18%
+
+## Play the game
+
+Play the finished game and find more information on itch.io:
+
+**[Welcome to the Junkyard on itch.io](https://dark-subtilizer.itch.io/welcome-to-the-junkyard)**
+
+A Windows build is also included in the `GameJam/Final Windows Build/` directory. To play it:
+
+1. Open the `GameJam/Final Windows Build/` folder.
+2. Run the included game executable.
+3. Keep the executable in the same folder as its accompanying data files.
+
+If you prefer to use the earlier build, check the `GameJam/Build 1/` directory.
+
+> GitHub may not display or run binary build files directly in the browser. Download the repository or the build folder before launching the game.
 
 ## About the project
 
-`GameJam` is a Unity-based game project featuring multiple levels, animated scenes, enemies, player systems, audio, visual effects, and video sequences. The repository contains the source project as well as Windows builds for playing the submitted game.
+`Welcome to the Junkyard` is a Unity-based game project featuring multiple levels, animated scenes, enemies, player systems, audio, visual effects, and video sequences. The repository contains the source project as well as Windows builds for playing the submitted game.
 
 ## Features and content
 
@@ -29,7 +46,7 @@ The project was submitted as a game-jam collaboration and placed in the **top 18
 - **Primary language:** C#
 - **Rendering and materials:** ShaderLab and HLSL
 - **Platform:** Windows build included
-- **Project type:** Unity 2D game
+- **Project type:** Unity game
 
 ## Repository structure
 
@@ -54,18 +71,6 @@ GameJam/
 └── README.md
 ```
 
-## Play the game
-
-A Windows build is included in the `GameJam/Final Windows Build/` directory. To play it:
-
-1. Open the `GameJam/Final Windows Build/` folder.
-2. Run the included game executable.
-3. Keep the executable in the same folder as its accompanying data files.
-
-If you prefer to use the earlier build, check the `GameJam/Build 1/` directory.
-
-> GitHub may not display or run binary build files directly in the browser. Download the repository or the build folder before launching the game.
-
 ## Open the project in Unity
 
 To inspect or continue development:
@@ -88,17 +93,22 @@ To inspect or continue development:
 - `Level 4.unity` — Level 4
 - `Congrats.unity` — Completion scene
 
-## Development notes
+## Team
 
-The project was created under game-jam time constraints. Some folders contain generated Unity and IDE files because this repository is intended to preserve the complete jam project and shared files. When making changes, edit the source assets under `GameJam/Assets/` and use Unity to create new builds.
+This game was created collaboratively by a team of four:
+
+- **Pranav** — Programmer and Unity game development
+- **Andrew** — Programmer and Unity game development
+- **Peet** — Highly skilled 3D artist
+- **Sound artist** — Sound design and audio
 
 ## Game Jam result
 
 This project was made for the **GMTK Summer Game Jam 2026** and achieved a placement in the **top 18% of submitted entries**.
 
-## Credits
+## Development notes
 
-This repository was created and shared by the `adj0131` team for the GMTK Summer Game Jam 2026.
+The project was created under game-jam time constraints. Some folders contain generated Unity and IDE files because this repository is intended to preserve the complete jam project and shared files. When making changes, edit the source assets under `GameJam/Assets/` and use Unity to create new builds.
 
 ## License
 
