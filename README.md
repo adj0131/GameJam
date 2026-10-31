@@ -14,6 +14,12 @@ If you only want to play the game, use the itch.io page:
 
 - https://dark-subtilizer.itch.io/welcome-to-the-junkyard
 
+## Documentation
+
+- [Getting started](docs/getting-started.md) — editor setup, controls, building, and troubleshooting
+- [Project guide](docs/project-guide.md) — folder layout, gameplay components, scene order, and upgrades
+- [Contributing](CONTRIBUTING.md) — contribution workflow, validation checklist, and bug reports
+
 ## Prerequisites
 
 - Unity Hub
